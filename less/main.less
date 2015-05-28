@@ -26,11 +26,18 @@
 	}
 	
 	.question {
+		display: none;
+		visibility: hidden;
 		width: (288em/16);
 		height: (200em/16);
 		background-image: url(question-sprit@2x.png);
 		background-size: (4608em/2/16) (400em/2/16);
 		background-repeat: no-repeat;
+		
+		&.active {
+			display: block;
+			visibility: visible;
+		}
 	}
 	
 	/* Spite positioning */
