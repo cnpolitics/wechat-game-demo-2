@@ -501,7 +501,7 @@ a {
   width: 18em;
   height: 12.5em;
   background-image: url(question-sprit@2x.png);
-  background-size: 18em 12.5em;
+  background-size: 144em 12.5em;
   background-repeat: no-repeat;
 }
 .quest-wrap .quest-0 {
@@ -518,6 +518,15 @@ a {
 }
 .quest-wrap .quest-4 {
   background-position: -72em 0;
+}
+.quest-wrap .quest-5 {
+  background-position: -90em 0;
+}
+.quest-wrap .quest-6 {
+  background-position: -108em 0;
+}
+.quest-wrap .quest-7 {
+  background-position: -126em 0;
 }
 .optn-wrap {
   position: relative;
