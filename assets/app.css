@@ -357,17 +357,22 @@ html {
   height: 100%;
 }
 body {
+  position: relative;
+  z-index: 0;
   width: 100%;
   height: 100%;
-  z-index: 0;
   color: #333333;
-  background-color: #fcfcfc;
+  background-color: #ffffff;
   font-family: "Avenir Next", "Segoe UI", "Helvetica Neue", Arial, "Hiragino Sans GB", "Microsoft YaHei UI", "Microsoft YaHei", "Source Han Sans", "Noto Sans", sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.0;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 button {
   padding: 0;
@@ -379,8 +384,7 @@ button {
       -ms-user-select: none;
           user-select: none;
   outline: none;
-  /*	 -webkit-font-smoothing: inherit;
-	-moz-osx-font-smoothing: inherit;*/
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 /*====== Typographic reset ======*/
 /*--- Chinese punctuation optimization ---*/
@@ -435,4 +439,165 @@ a {
   text-decoration: none;
 }
 /*====== Typographic reset END ======*/
+.hero-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: calc(18em + 70vw);
+  overflow: hidden;
+}
+.hero-wrap .hero-image {
+  width: 100%;
+  height: 75vw;
+}
+.hero-wrap .hero-image img {
+  display: none;
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+}
+.hero-wrap .hero-image img.active {
+  display: block;
+  visibility: visible;
+}
+.hero-wrap .tearpaper-lower {
+  position: absolute;
+  top: 41.66666667vw;
+  left: 0;
+  width: 100%;
+  height: 66.66666667vw;
+}
+.hero-wrap .tearpaper-lower img {
+  width: 100%;
+  height: 100%;
+}
+.main-wrap {
+  min-height: 100%;
+  margin-bottom: -5.5em;
+}
+.main-wrap:after {
+  content: "";
+  display: block;
+  height: 5.5em;
+}
+.quest-wrap {
+  position: relative;
+  min-height: 100%;
+  padding-top: 65.625vw;
+  padding-left: 1em;
+  padding-right: 1em;
+  /* Spite positioning */
+}
+@media (min-width: 350px) {
+  .quest-wrap {
+    padding-top: 70vw;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+  }
+}
+@media (min-width: 380px) {
+  .quest-wrap {
+    padding-top: 75vw;
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+}
+.quest-wrap .question {
+  display: none;
+  visibility: hidden;
+  width: 18em;
+  height: 12.5em;
+  background-image: url(question-sprit@2x.png);
+  background-size: 144em 12.5em;
+  background-repeat: no-repeat;
+}
+.quest-wrap .question.active {
+  display: block;
+  visibility: visible;
+}
+.quest-wrap .quest-0 {
+  background-position: 0 0;
+}
+.quest-wrap .quest-1 {
+  background-position: -18em 0;
+}
+.quest-wrap .quest-2 {
+  background-position: -36em 0;
+}
+.quest-wrap .quest-3 {
+  background-position: -54em 0;
+}
+.quest-wrap .quest-4 {
+  background-position: -72em 0;
+}
+.quest-wrap .quest-5 {
+  background-position: -90em 0;
+}
+.quest-wrap .quest-6 {
+  background-position: -108em 0;
+}
+.quest-wrap .quest-7 {
+  background-position: -126em 0;
+}
+.optn-wrap {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  box-sizing: border-box;
+  width: 100%;
+  height: 5.5em;
+  max-width: 26em;
+  margin-left: auto;
+  margin-right: 0;
+  padding-left: 1em;
+  padding-right: 1em;
+  /* Spite positioning */
+}
+@media (min-width: 350px) {
+  .optn-wrap {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+  }
+}
+@media (min-width: 380px) {
+  .optn-wrap {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+}
+.optn-wrap .opt-btn {
+  width: 3em;
+  height: 3em;
+  margin-top: 0.5em;
+  background-image: url(opt-sprite@2x.png);
+  background-size: 15em 3em;
+  background-repeat: no-repeat;
+  -webkit-transition: opacity .15s ease;
+          transition: opacity .15s ease;
+}
+.optn-wrap .opt-btn.pressing {
+  opacity: .25;
+}
+.optn-wrap .opt-0 {
+  background-position: 0 0;
+}
+.optn-wrap .opt-1 {
+  background-position: -3em 0;
+}
+.optn-wrap .opt-2 {
+  background-position: -6em 0;
+}
+.optn-wrap .opt-3 {
+  background-position: -9em 0;
+}
+.optn-wrap .opt-4 {
+  background-position: -12em 0;
+}
 /*# sourceMappingURL=app.css.map */
