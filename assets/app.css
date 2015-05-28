@@ -492,6 +492,7 @@ a {
 }
 @media (min-width: 380px) {
   .quest-wrap {
+    padding-top: 75vw;
     padding-left: 2em;
     padding-right: 2em;
   }
