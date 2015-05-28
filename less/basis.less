@@ -1,0 +1,84 @@
+html {
+	height: 100%;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+	color: @text-main;
+	background-color: @bg;
+	font-family: "Avenir Next", "Segoe UI", "Helvetica Neue", Arial, "Hiragino Sans GB", "Microsoft YaHei UI" , "Microsoft YaHei", "Source Han Sans", "Noto Sans", sans-serif;
+	font-size: 18px;
+	line-height: 1.0;
+	text-rendering: optimizeLegibility;
+	 -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+button {
+	padding: 0;
+	border: 0;
+	background: none;
+	text-align: center;
+	user-select: none;
+	outline: none;
+/*	 -webkit-font-smoothing: inherit;
+	-moz-osx-font-smoothing: inherit;*/
+}
+
+/*====== Typographic reset ======*/
+/*--- Chinese punctuation optimization ---*/
+@font-face {
+	font-family: 'GB Punct';
+	src: local("Hiragino Sans GB"), local("Heiti SC"), local("SimHei");
+	unicode-range: U+2014, U+00B7, U+2026, U+201C, U+201D;
+	/* em dash,
+	 * middle dot,
+	 * ellipsis,
+	 * left double quotes,
+	 * right doubel quotes
+	**/
+}
+
+.gb-punct {
+	font-family: "GB Punct", "Avenir Next", "Segoe UI", "Helvetica Neue", Arial, "Hiragino Sans GB", "Microsoft YaHei UI", "Microsoft YaHei", "Source Han Sans", "Noto Sans", sans-serif;
+}
+/*--- Chinese punctuation optimization END ---*/
+
+header,
+section,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+ol,
+ul,
+li,
+figure,
+img,
+figcaption {
+	margin: 0;
+}
+
+ol,
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+p,
+li,
+figcaption {
+	hyphens: auto;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+/*====== Typographic reset END ======*/
