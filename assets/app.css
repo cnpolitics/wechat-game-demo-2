@@ -441,6 +441,7 @@ a {
 /*====== Typographic reset END ======*/
 .hero-wrap {
   position: absolute;
+  z-index: -100;
   top: 0;
   left: 0;
   width: 100%;
@@ -448,25 +449,46 @@ a {
   overflow: hidden;
 }
 .hero-wrap .hero-image {
+  position: relative;
   width: 100%;
   height: 75vw;
 }
 .hero-wrap .hero-image img {
-  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
   visibility: hidden;
   width: 100%;
   height: 100%;
+  opacity: 0;
+  -webkit-filter: blur(3px);
+          filter: blur(3px);
+  -webkit-transform: scale3d(1.1, 1.1, 1);
+          transform: scale3d(1.1, 1.1, 1);
+  will-change: opacity, filter, transform;
+  -webkit-transition: visibility 0s linear 1.75s, opacity 1.75s ease-in-out, -webkit-filter 1.75s ease-in-out, -webkit-transform 1.75s ease-in-out, visibility 0s linear 1.75s, opacity 1.75s ease-in-out, filter 1.75s ease-in-out, -webkit-transform 1.75s ease-in-out;
+          transition: visibility 0s linear 1.75s, opacity 1.75s ease-in-out, filter 1.75s ease-in-out, transform 1.75s ease-in-out;
 }
 .hero-wrap .hero-image img.active {
-  display: block;
   visibility: visible;
+  opacity: 1;
+  -webkit-filter: blur(0px);
+          filter: blur(0px);
+  -webkit-transform: scale3d(1, 1, 1);
+          transform: scale3d(1, 1, 1);
+  will-change: opacity, filter, transform;
+  -webkit-transition: visibility 0s linear 0s, opacity 1.5s ease-in-out 0.15s, -webkit-filter 1.5s ease-in-out 0.15s, -webkit-transform 1.5s ease-in-out 0.15s, visibility 0s linear 0s, opacity 1.5s ease-in-out 0.15s, filter 1.5s ease-in-out 0.15s, -webkit-transform 1.5s ease-in-out 0.15s;
+          transition: visibility 0s linear 0s, opacity 1.5s ease-in-out 0.15s, filter 1.5s ease-in-out 0.15s, transform 1.5s ease-in-out 0.15s;
 }
 .hero-wrap .tearpaper-lower {
   position: absolute;
+  z-index: 100;
   top: 41.66666667vw;
   left: 0;
   width: 100%;
   height: 66.66666667vw;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
 }
 .hero-wrap .tearpaper-lower img {
   width: 100%;
@@ -579,8 +601,6 @@ a {
   background-image: url(opt-sprite@2x.png);
   background-size: 15em 3em;
   background-repeat: no-repeat;
-  -webkit-transition: opacity .15s ease;
-          transition: opacity .15s ease;
 }
 .optn-wrap .opt-btn.pressing {
   opacity: .25;

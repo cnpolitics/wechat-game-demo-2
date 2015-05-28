@@ -1,1 +1,1 @@
-$(function(){FastClick.attach(document.body)}),$("button").on("touchstart",function(){$(this).addClass("pressing"),$("button").on("touchend",function(){$(this).removeClass("pressing")})}),function(){console.log("test")}();
+$(function(){FastClick.attach(document.body)}),$("button").on("touchstart",function(){$(this).addClass("pressing"),$("button").on("touchend",function(){$(this).removeClass("pressing")})}),function(){"use strict";var t=0;$(".opt-btn").click(function(){$(".quest-"+t).removeClass("active"),t++,t>7&&(t=0),$(".quest-"+t).addClass("active")})}();
