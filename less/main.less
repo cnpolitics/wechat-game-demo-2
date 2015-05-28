@@ -1,0 +1,31 @@
+.main-wrap {
+	position: relative;
+	padding-top: 65.625vw;
+	padding-left: 1em;
+	padding-right: 1em;
+	@media (min-width: 350px) {
+		padding-top: 70vw;
+		padding-left: 1.5em;
+		padding-right: 1.5em;	
+	}
+	@media (min-width: 380px) {
+		padding-left: 2em;
+		padding-right: 2em;	
+	}
+	
+	.question {
+		width: (288em/16);
+		height: (200em/16);
+		background-image: url(question-sprit@2x.png);
+		background-size: (576em/2/16) (400em/2/16);
+		background-repeat: no-repeat;
+	}
+	
+	/* Spite positioning */
+	.quest-0 { background-position: 0 0; }
+	.quest-1 { background-position: (-288em/16*1) 0; }
+	.quest-2 { background-position: (-288em/16*2) 0; }
+	.quest-3 { background-position: (-288em/16*3) 0; }
+	.quest-4 { background-position: (-288em/16*4) 0; }
+	
+}

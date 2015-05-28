@@ -1,0 +1,41 @@
+.optn-wrap {
+	position: absolute;
+	bottom: 2em;
+	left: 0;
+	display: flex;
+	justify-content: space-between;
+	box-sizing: border-box;
+	width: 100%;
+	
+	padding-left: 1em;
+	padding-right: 1em;	
+	@media (min-width: 350px) {
+		padding-left: 1.5em;
+		padding-right: 1.5em;	
+	}
+	@media (min-width: 380px) {
+		padding-left: 2em;
+		padding-right: 2em;	
+	}
+	
+	.opt-btn {
+		width: (48em/16);
+		height: (48em/16);
+		background-image: url(opt-sprite@2x.png);
+		background-size: (480em/2/16) (96em/2/16);
+		background-repeat: no-repeat;
+		transition: opacity .15s ease;
+		
+		//&:hover,
+		&.pressing {
+			opacity: .25;
+		}
+	}
+	
+	/* Spite positioning */
+	.opt-0 { background-position: 0 0; }
+	.opt-1 { background-position: (-48em/16*1) 0; }
+	.opt-2 { background-position: (-48em/16*2) 0; }
+	.opt-3 { background-position: (-48em/16*3) 0; }
+	.opt-4 { background-position: (-48em/16*4) 0; }
+}
