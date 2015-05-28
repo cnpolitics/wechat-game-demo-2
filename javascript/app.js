@@ -1,11 +1,9 @@
 /* global FastClick */
-
 $(function() {
     FastClick.attach(document.body);
 });
 
-(function() {
-
+/* Switch pressing effect for touch device. */
 $('button').on('touchstart', function() {
 	$(this).addClass('pressing');
 	
@@ -13,7 +11,3 @@ $('button').on('touchstart', function() {
 		$(this).removeClass('pressing');
 	});
 });
-
-
-
-})();
