@@ -11,7 +11,7 @@ html(lang="en")
 				img(src="assets/tearpaper-lower.png")
 				
 			figure.hero-image
-				img(src="assets/hero-q0.jpg").quest-0.active
+				img(src="assets/hero-cover.jpg").cover.active
 				img(src="assets/hero-q1.jpg").quest-1
 				img(src="assets/hero-q2.jpg").quest-2
 				img(src="assets/hero-q3.jpg").quest-3
@@ -19,17 +19,18 @@ html(lang="en")
 				img(src="assets/hero-q5.jpg").quest-5
 				img(src="assets/hero-q6.jpg").quest-6
 				img(src="assets/hero-q7.jpg").quest-7
-			
+				img(src="assets/hero-q8.jpg").quest-8
 		
 		.main-wrap
 			.copy-wrap
-				.question.quest-0.active
+				.copy.cover.active
 		
 		.optn-wrap
-			button.opt-btn.opt-0
-			button.opt-btn.opt-1
-			button.opt-btn.opt-2
-			button.opt-btn.opt-3
-			button.opt-btn.opt-4
+			button.start-btn.active
+			button.opt-btn.opt-1(style="display:none")
+			button.opt-btn.opt-2(style="display:none")
+			button.opt-btn.opt-3(style="display:none")
+			button.opt-btn.opt-4(style="display:none")
+			button.opt-btn.opt-5(style="display:none")
 
 	script(type="text/javascript" src="assets/app.js")
