@@ -1,4 +1,4 @@
-/* global FastClick */
+/* global $, FastClick */
 $(function() {
     FastClick.attach(document.body);
 });
