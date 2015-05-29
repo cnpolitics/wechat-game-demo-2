@@ -1,0 +1,52 @@
+.main-wrap {
+	min-height: 100%;
+	margin-bottom: (-88em/16);
+	&:after {
+		content: "";
+		display: block;
+		height: (88em/16);
+	}
+}
+
+.copy-wrap {
+	position: relative;
+	min-height: 100%;
+	padding-top: 65.625vw;
+	padding-left: 1em;
+	padding-right: 1em;
+	@media (min-width: 350px) {
+		padding-top: 70vw;
+		padding-left: 1.5em;
+		padding-right: 1.5em;	
+	}
+	@media (min-width: 380px) {
+		padding-top: 75vw;
+		padding-left: 2em;
+		padding-right: 2em;	
+	}
+	
+	.question {
+		width: (288em/16);
+		height: (200em/16);
+		background-image: url(question-sprit@2x.png);
+		background-size: (4608em/2/16) (400em/2/16);
+		background-repeat: no-repeat;
+		opacity: 0;
+		transition: opacity .75s ease-in-out, background-position 0s linear .75s;
+				
+		&.active {
+			opacity: 1;
+			transition: opacity 1s ease-in-out;
+		}
+	}
+	
+	/* Spite positioning */
+	.quest-0 { background-position: 0 0; }
+	.quest-1 { background-position: (-288em/16*1) 0; }
+	.quest-2 { background-position: (-288em/16*2) 0; }
+	.quest-3 { background-position: (-288em/16*3) 0; }
+	.quest-4 { background-position: (-288em/16*4) 0; }
+	.quest-5 { background-position: (-288em/16*5) 0; }
+	.quest-6 { background-position: (-288em/16*6) 0; }
+	.quest-7 { background-position: (-288em/16*7) 0; }	
+}

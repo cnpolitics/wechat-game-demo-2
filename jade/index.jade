@@ -1,0 +1,35 @@
+doctype html
+html(lang="en")
+	-var pageTitl = "少女指数测试"
+	-var pageDisc = "少女指数测试｜少女哪吒｜拇指阅读"
+	-var pageKeyw = "少女, 指数, 测试, 少女哪吒, 电影, 微信, 微信公众号, 朋友圈, 拇指阅读, MZRead, WeChat"
+	include _head.jade
+	
+	body
+		.hero-wrap
+			.tearpaper-lower
+				img(src="assets/tearpaper-lower.png")
+				
+			figure.hero-image
+				img(src="assets/hero-q0.jpg").quest-0.active
+				img(src="assets/hero-q1.jpg").quest-1
+				img(src="assets/hero-q2.jpg").quest-2
+				img(src="assets/hero-q3.jpg").quest-3
+				img(src="assets/hero-q4.jpg").quest-4
+				img(src="assets/hero-q5.jpg").quest-5
+				img(src="assets/hero-q6.jpg").quest-6
+				img(src="assets/hero-q7.jpg").quest-7
+			
+		
+		.main-wrap
+			.copy-wrap
+				.question.quest-0.active
+		
+		.optn-wrap
+			button.opt-btn.opt-0
+			button.opt-btn.opt-1
+			button.opt-btn.opt-2
+			button.opt-btn.opt-3
+			button.opt-btn.opt-4
+
+	script(type="text/javascript" src="assets/app.js")
