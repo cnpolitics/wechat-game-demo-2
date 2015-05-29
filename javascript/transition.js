@@ -1,5 +1,4 @@
 /* global $ */
-
 (function() {
 	'use strict';
 	
@@ -26,6 +25,10 @@
 	});
 		
 	$('.opt-btn').click(function() {
+		if (nextQuestIdx > 8) {
+			return;	// For debug
+		}
+		
 		// Hero image transition.
 		$('.hero-image .quest-' + currQuestIdx).removeClass('active');
 		$('.hero-image .quest-' + nextQuestIdx).addClass('active');
@@ -40,8 +43,5 @@
 		
 		currQuestIdx = nextQuestIdx;
 		nextQuestIdx++;
-		if (nextQuestIdx > 8) {
-			nextQuestIdx = 1;	// Loop for debug
-		}
 	});
 })();
