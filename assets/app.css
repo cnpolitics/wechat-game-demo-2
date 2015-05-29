@@ -477,8 +477,8 @@ a {
   -webkit-transform: scale3d(1, 1, 1);
           transform: scale3d(1, 1, 1);
   will-change: opacity, filter, transform;
-  -webkit-transition: visibility 0s linear 0s, opacity 1.5s ease-in-out 0.15s, -webkit-filter 1.5s ease-in-out 0.15s, -webkit-transform 1.5s ease-in-out 0.15s, visibility 0s linear 0s, opacity 1.5s ease-in-out 0.15s, filter 1.5s ease-in-out 0.15s, -webkit-transform 1.5s ease-in-out 0.15s;
-          transition: visibility 0s linear 0s, opacity 1.5s ease-in-out 0.15s, filter 1.5s ease-in-out 0.15s, transform 1.5s ease-in-out 0.15s;
+  -webkit-transition: visibility 0s linear 0s, opacity 1.25s ease-in-out 0.15s, -webkit-filter 1.25s ease-in-out 0.15s, -webkit-transform 1.25s ease-in-out 0.15s, visibility 0s linear 0s, opacity 1.25s ease-in-out 0.15s, filter 1.25s ease-in-out 0.15s, -webkit-transform 1.25s ease-in-out 0.15s;
+          transition: visibility 0s linear 0s, opacity 1.25s ease-in-out 0.15s, filter 1.25s ease-in-out 0.15s, transform 1.25s ease-in-out 0.15s;
 }
 .hero-wrap .tearpaper-lower {
   position: absolute;
@@ -503,7 +503,7 @@ a {
   display: block;
   height: 5.5em;
 }
-.quest-wrap {
+.copy-wrap {
   position: relative;
   min-height: 100%;
   padding-top: 65.625vw;
@@ -512,54 +512,56 @@ a {
   /* Spite positioning */
 }
 @media (min-width: 350px) {
-  .quest-wrap {
+  .copy-wrap {
     padding-top: 70vw;
     padding-left: 1.5em;
     padding-right: 1.5em;
   }
 }
 @media (min-width: 380px) {
-  .quest-wrap {
+  .copy-wrap {
     padding-top: 75vw;
     padding-left: 2em;
     padding-right: 2em;
   }
 }
-.quest-wrap .question {
-  display: none;
-  visibility: hidden;
+.copy-wrap .question {
   width: 18em;
   height: 12.5em;
   background-image: url(question-sprit@2x.png);
   background-size: 144em 12.5em;
   background-repeat: no-repeat;
+  opacity: 0;
+  -webkit-transition: opacity 0.75s ease-in-out, background-position 0s linear 0.75s;
+          transition: opacity 0.75s ease-in-out, background-position 0s linear 0.75s;
 }
-.quest-wrap .question.active {
-  display: block;
-  visibility: visible;
+.copy-wrap .question.active {
+  opacity: 1;
+  -webkit-transition: opacity 1s ease-in-out;
+          transition: opacity 1s ease-in-out;
 }
-.quest-wrap .quest-0 {
+.copy-wrap .quest-0 {
   background-position: 0 0;
 }
-.quest-wrap .quest-1 {
+.copy-wrap .quest-1 {
   background-position: -18em 0;
 }
-.quest-wrap .quest-2 {
+.copy-wrap .quest-2 {
   background-position: -36em 0;
 }
-.quest-wrap .quest-3 {
+.copy-wrap .quest-3 {
   background-position: -54em 0;
 }
-.quest-wrap .quest-4 {
+.copy-wrap .quest-4 {
   background-position: -72em 0;
 }
-.quest-wrap .quest-5 {
+.copy-wrap .quest-5 {
   background-position: -90em 0;
 }
-.quest-wrap .quest-6 {
+.copy-wrap .quest-6 {
   background-position: -108em 0;
 }
-.quest-wrap .quest-7 {
+.copy-wrap .quest-7 {
   background-position: -126em 0;
 }
 .optn-wrap {
