@@ -8,7 +8,7 @@
 	}
 }
 
-.quest-wrap {
+.copy-wrap {
 	position: relative;
 	min-height: 100%;
 	padding-top: 65.625vw;
@@ -26,17 +26,17 @@
 	}
 	
 	.question {
-		display: none;
-		visibility: hidden;
 		width: (288em/16);
 		height: (200em/16);
 		background-image: url(question-sprit@2x.png);
 		background-size: (4608em/2/16) (400em/2/16);
 		background-repeat: no-repeat;
-		
+		opacity: 0;
+		transition: opacity .75s ease-in-out, background-position 0s linear .75s;
+				
 		&.active {
-			display: block;
-			visibility: visible;
+			opacity: 1;
+			transition: opacity 1s ease-in-out;
 		}
 	}
 	
