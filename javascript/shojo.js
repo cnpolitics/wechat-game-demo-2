@@ -13,10 +13,10 @@
 	};
 	
 	// Method: Sum the score.
-	Shojo.prototype.getScore = function(scoreChart) {
+	Shojo.prototype.getScore = function(SCORE_CHART) {
 		var sum = 0;
 		for (var i = 0; i < this.option.length; i++) {
-			sum += scoreChart[i][this.option[i]];
+			sum += SCORE_CHART[i][this.option[i]];
 		}	
 		
 		return sum;
