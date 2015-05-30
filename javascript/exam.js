@@ -16,9 +16,23 @@
 	var shojo = new Shojo(),
 		currQuestIdx = 1;
 	
+	// For debug.
+	function result(score) {
+		if (score <= 16) {
+			shojo.result = 1;
+		} else if (score <= 24) {
+			shojo.result = 2;
+		} else if (score <= 31) {
+			shojo.result = 3;
+		} else {
+			shojo.result = 4;
+		}
+		return shojo.result;
+	}
+	
 	$('.opt-btn').click(function() {
 		if (currQuestIdx > 8) {
-			console.log('No more question.'); // For debug
+			console.log('Result: ' + result(shojo.getScore(scoreChart))); // For debug
 			return;	// Safeguard.
 		}
 		
