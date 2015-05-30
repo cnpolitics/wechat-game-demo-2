@@ -3,6 +3,7 @@
 	var Shojo = function() {
 		this.id = '0';
 		this.option = new Uint8Array(8);
+		this.result = 0;
 		//this.score = -1;
 	};
 	
