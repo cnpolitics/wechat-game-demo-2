@@ -1,5 +1,5 @@
-/* global $ */
-(function(shojo) {
+/* global $, shojo */
+(function() {
 	'use strict';
 	
 	var currQuestIdx = 1,
@@ -29,9 +29,11 @@
 		}, 750);
 	});
 		
-	$('.opt-btn').click(function() {
+	$('.opt-btn').click(function() {			
 		// The last question.
 		if (currQuestIdx === 8) {
+			// console.log(shojo.result);
+			
 			// Hero image transition.
 			$('.hero-image .quest-' + currQuestIdx).removeClass('active');
 			$('.hero-image .result-' + shojo.result).addClass('active');
@@ -48,6 +50,11 @@
 				.addClass('result-' + shojo.result);
 			setTimeout(function() {
 				$('.copy').addClass('active');
+				
+				// Share widget transition.
+				setTimeout(function() {	
+					$('.share-widget').show().addClass('active');
+				}, 500);
 			}, 750);
 			
 			return;
@@ -68,4 +75,4 @@
 		currQuestIdx = nextQuestIdx;
 		nextQuestIdx++;
 	});
-})(window.shojo);
+})();
