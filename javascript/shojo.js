@@ -13,14 +13,31 @@
 	};
 	
 	// Method: Sum the score.
-	Shojo.prototype.getScore = function(scoreChart) {
+	Shojo.prototype.getScore = function(SCORE_CHART) {
 		var sum = 0;
 		for (var i = 0; i < this.option.length; i++) {
-			sum += scoreChart[i][this.option[i]];
+			sum += SCORE_CHART[i][this.option[i]];
 		}	
 		
 		return sum;
 	};
+	
+	// Method: Map the score to the result.
+	/*Shojo.prototype.getResult = function(SCORE_CHART) {
+		var score = this.getScore(SCORE_CHART);
+		
+		if (score <= 16) {
+			this.result = 1;
+		} else if (score <= 24) {
+			this.result = 2;
+		} else if (score <= 31) {
+			this.result = 3;
+		} else {
+			this.result = 4;
+		}
+		
+		return this.result;
+	};*/
 	
 	window.Shojo = Shojo;
 	return window.Shojo;

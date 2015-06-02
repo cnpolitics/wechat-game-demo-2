@@ -4,10 +4,10 @@ $(function() {
 });
 
 /* Switch pressing effect for touch device. */
-$('button').on('touchstart', function() {
+$('button, a').on('touchstart', function() {
 	$(this).addClass('pressing');
 	
-	$('button').on('touchend', function() {
+	$('button, a').on('touchend', function() {
 		$(this).removeClass('pressing');
 	});
 });
