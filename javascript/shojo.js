@@ -22,6 +22,23 @@
 		return sum;
 	};
 	
+	// Method: Map the score to the result.
+	/*Shojo.prototype.getResult = function(SCORE_CHART) {
+		var score = this.getScore(SCORE_CHART);
+		
+		if (score <= 16) {
+			this.result = 1;
+		} else if (score <= 24) {
+			this.result = 2;
+		} else if (score <= 31) {
+			this.result = 3;
+		} else {
+			this.result = 4;
+		}
+		
+		return this.result;
+	};*/
+	
 	window.Shojo = Shojo;
 	return window.Shojo;
 })();
