@@ -488,8 +488,8 @@ a {
   left: 0;
   width: 100%;
   height: 66.66666667vw;
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 100em);
+          transform: translate3d(0, 0, 100em);
 }
 .hero-wrap .tearpaper-lower img {
   width: 100%;
@@ -510,6 +510,7 @@ a {
   padding-top: 65.625vw;
   padding-left: 1em;
   padding-right: 1em;
+  /* Centering the result copies */
   /* Spite positioning */
 }
 @media (min-width: 350px) {
@@ -530,7 +531,7 @@ a {
   width: 18em;
   height: 12.5em;
   background-image: url(copy-sprit@2x.png);
-  background-size: 162em 12.5em;
+  background-size: 234em 12.5em;
   background-repeat: no-repeat;
   opacity: 0;
   -webkit-transition: opacity 0.75s ease-in-out, background-position 0s linear 0.75s;
@@ -540,6 +541,12 @@ a {
   opacity: 1;
   -webkit-transition: opacity 1s ease-in-out;
           transition: opacity 1s ease-in-out;
+}
+.copy-wrap .result-1.active,
+.copy-wrap .result-2.active,
+.copy-wrap .result-3.active,
+.copy-wrap .resutl-4.active {
+  margin: 0 auto;
 }
 .copy-wrap .cover {
   background-position: 0 0;
@@ -567,6 +574,18 @@ a {
 }
 .copy-wrap .quest-8 {
   background-position: -144em 0;
+}
+.copy-wrap .result-1 {
+  background-position: -162em 0;
+}
+.copy-wrap .result-2 {
+  background-position: -180em 0;
+}
+.copy-wrap .result-3 {
+  background-position: -198em 0;
+}
+.copy-wrap .result-4 {
+  background-position: -216em 0;
 }
 .optn-wrap {
   position: relative;

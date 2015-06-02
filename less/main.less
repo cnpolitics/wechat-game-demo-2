@@ -29,7 +29,7 @@
 		width: (288em/16);
 		height: (200em/16);
 		background-image: url(copy-sprit@2x.png);
-		background-size: (5184em/2/16) (400em/2/16);
+		background-size: (7488em/2/16) (400em/2/16);
 		background-repeat: no-repeat;
 		opacity: 0;
 		transition: opacity .75s ease-in-out, background-position 0s linear .75s;
@@ -38,6 +38,14 @@
 			opacity: 1;
 			transition: opacity 1s ease-in-out;
 		}
+	}
+	
+	/* Centering the result copies */
+	.result-1,
+	.result-2,
+	.result-3,
+	.resutl-4 {
+		&.active { margin: 0 auto; }
 	}
 	
 	/* Spite positioning */
@@ -50,4 +58,8 @@
 	.quest-6 { background-position: (-288em/16*6) 0; }
 	.quest-7 { background-position: (-288em/16*7) 0; }
 	.quest-8 { background-position: (-288em/16*8) 0; }
+	.result-1 { background-position: (-288em/16*9) 0; }
+	.result-2 { background-position: (-288em/16*10) 0; }
+	.result-3 { background-position: (-288em/16*11) 0; }
+	.result-4 { background-position: (-288em/16*12) 0; }
 }
