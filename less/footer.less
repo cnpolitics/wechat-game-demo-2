@@ -82,14 +82,14 @@
 			bottom: 0;
 			right: 0;
 			display: inline-block;
-			width: ((50em + 4 + 12) / 16);
+			width: ((60em + 10 + 4 + 12) / 16);
 			vertical-align: top;
 			text-align: right;
 			line-height: 1;
 			
 			span {
 				display: inline-block;
-				width: 5em;
+				width: 6em;
 				height: 2.4em;
 				padding: 0.6em 0.4em 0.6em 0;
 				color: @theme;
@@ -122,11 +122,28 @@
 		.logo-nezha,
 		.logo-mzread,
 		.link-ticket {
+			opacity: 0;
+			transform: scale3d(0.75, 0.75, 1);
+		}
+		
+		&.active {
 			opacity: 1;
-			transition: opacity .25s ease;
 			
-			&.pressing {
-				opacity: .5;
+			&.delay .logo-nezha { transition-delay: .5s !important; }
+			&.delay .logo-mzread { transition-delay: 1s !important; }
+			&.delay .link-ticket { transition-delay: 1.5s !important; }
+			
+			.logo-nezha,
+			.logo-mzread,
+			.link-ticket {
+				opacity: 1;
+				transform: scale3d(1, 1, 1);
+				transition: opacity 1s ease-in-out, transform 1s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+				
+				&.pressing {
+					opacity: .5;
+					transition: opacity .2s ease-out;
+				}
 			}
 		}
 	}
