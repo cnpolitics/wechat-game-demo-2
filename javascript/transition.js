@@ -30,17 +30,19 @@
 	});
 		
 	$('.opt-btn').click(function() {
-//		if (nextQuestIdx > 8) {
-//			return;	// For debug
-//		}
-		
 		// The last question.
 		if (currQuestIdx === 8) {
 			// Hero image transition.
 			$('.hero-image .quest-' + currQuestIdx).removeClass('active');
 			$('.hero-image .result-' + shojo.result).addClass('active');
 			
-			// Question copy transition.
+			// Button transition.
+			$('.opt-btn').addClass('delay').removeClass('active');
+			setTimeout(function() {
+				$('.opt-btn').hide();
+			}, 1100);
+			
+			// Copy transition.
 			$('.copy')
 				.removeClass('active quest-' + currQuestIdx)
 				.addClass('result-' + shojo.result);
