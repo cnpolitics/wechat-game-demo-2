@@ -10,3 +10,5 @@
 - Flex-box compatibility for lower versions of Android webview.
 - Dynamic blur performance on low-end Android devices.
 	- Consider to introduce the Modernizr 3.0.0.
+
+- Large CSS spite asset's rendering issue (OnePlus).
