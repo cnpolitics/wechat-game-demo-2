@@ -437,6 +437,7 @@ figcaption {
 a {
   color: inherit;
   text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 /*====== Typographic reset END ======*/
 .hero-wrap {
@@ -652,7 +653,7 @@ a {
   -webkit-transition: opacity 0.3s ease-in-out;
           transition: opacity 0.3s ease-in-out;
 }
-.optn-wrap {
+.foot-wrap {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -672,21 +673,23 @@ a {
   padding-right: 1em;
   /* Spite positioning */
   /* Delay for first loading  */
+  /*--- Result footer ---*/
+  /*--- Result footer END ---*/
 }
 @media (min-width: 350px) {
-  .optn-wrap {
+  .foot-wrap {
     padding-left: 1.5em;
     padding-right: 1.5em;
   }
 }
 @media (min-width: 380px) {
-  .optn-wrap {
+  .foot-wrap {
     padding-left: 2em;
     padding-right: 2em;
   }
 }
-.optn-wrap .start-btn,
-.optn-wrap .opt-btn {
+.foot-wrap .start-btn,
+.foot-wrap .opt-btn {
   width: 3em;
   height: 3em;
   margin-top: 0.5em;
@@ -699,58 +702,127 @@ a {
           transition: transform 0.5s cubic-bezier(0.57, -0.37, 0.74, 0.05);
 }
 @media (min-width: 416px) {
-  .optn-wrap .start-btn,
-  .optn-wrap .opt-btn {
+  .foot-wrap .start-btn,
+  .foot-wrap .opt-btn {
     margin-left: auto;
     margin-right: 0;
   }
 }
-.optn-wrap .start-btn.active,
-.optn-wrap .opt-btn.active {
+.foot-wrap .start-btn.active,
+.foot-wrap .opt-btn.active {
   -webkit-transform: scale3d(1, 1, 1);
           transform: scale3d(1, 1, 1);
   -webkit-transition: -webkit-transform 0.2s ease-out;
           transition: transform 0.2s ease-out;
 }
-.optn-wrap .start-btn.active.pressing,
-.optn-wrap .opt-btn.active.pressing {
+.foot-wrap .start-btn.active.pressing,
+.foot-wrap .opt-btn.active.pressing {
   -webkit-transform: scale3d(1.15, 1.15, 1);
           transform: scale3d(1.15, 1.15, 1);
   -webkit-transition: -webkit-transform 0.2s ease-out;
           transition: transform 0.2s ease-out;
 }
-.optn-wrap .start-btn {
+.foot-wrap .start-btn {
   background-position: 0 0;
 }
-.optn-wrap .opt-1 {
+.foot-wrap .opt-1 {
   background-position: -3em 0;
 }
-.optn-wrap .opt-2 {
+.foot-wrap .opt-2 {
   background-position: -6em 0;
 }
-.optn-wrap .opt-3 {
+.foot-wrap .opt-3 {
   background-position: -9em 0;
 }
-.optn-wrap .opt-4 {
+.foot-wrap .opt-4 {
   background-position: -12em 0;
 }
-.optn-wrap .opt-5 {
+.foot-wrap .opt-5 {
   background-position: -15em 0;
 }
-.optn-wrap .delay.opt-2 {
+.foot-wrap .delay.opt-2 {
   -webkit-transition-delay: .1s !important;
           transition-delay: .1s !important;
 }
-.optn-wrap .delay.opt-3 {
+.foot-wrap .delay.opt-3 {
   -webkit-transition-delay: .2s !important;
           transition-delay: .2s !important;
 }
-.optn-wrap .delay.opt-4 {
+.foot-wrap .delay.opt-4 {
   -webkit-transition-delay: .3s !important;
           transition-delay: .3s !important;
 }
-.optn-wrap .delay.opt-5 {
+.foot-wrap .delay.opt-5 {
   -webkit-transition-delay: .4s !important;
           transition-delay: .4s !important;
+}
+.foot-wrap .result {
+  position: relative;
+  width: 100%;
+  height: 2.25em;
+  margin-bottom: 1em;
+  padding-top: 2.25em;
+  /* Spite positioning */
+  /* Transitions */
+}
+.foot-wrap .result .logo-nezha,
+.foot-wrap .result .logo-mzread {
+  display: inline-block;
+  width: 5.625em;
+  height: 2.25em;
+}
+.foot-wrap .result .link-ticket {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: inline-block;
+  width: 4.125em;
+  vertical-align: top;
+  text-align: right;
+  line-height: 1;
+}
+.foot-wrap .result .link-ticket span {
+  display: inline-block;
+  width: 5em;
+  height: 2.4em;
+  padding: 0.6em 0.4em 0.6em 0;
+  color: #871a1f;
+  font-size: 0.625em;
+  line-height: 1.2;
+  text-align: right;
+}
+.foot-wrap .result .link-ticket i {
+  display: inline-block;
+  width: 0.75em;
+  height: 2.25em;
+  vertical-align: top;
+}
+.foot-wrap .result .logo-nezha,
+.foot-wrap .result .logo-mzread,
+.foot-wrap .result .link-ticket i {
+  background-image: url(footer-sprite@2x.png);
+  background-size: 12em 2.25em;
+  background-repeat: no-repeat;
+}
+.foot-wrap .result .logo-nezha {
+  background-position: 0 0;
+}
+.foot-wrap .result .logo-mzread {
+  background-position: -5.625em 0;
+}
+.foot-wrap .result .link-ticket i {
+  background-position: -11.25em 0;
+}
+.foot-wrap .result .logo-nezha,
+.foot-wrap .result .logo-mzread,
+.foot-wrap .result .link-ticket {
+  opacity: 1;
+  -webkit-transition: opacity .25s ease;
+          transition: opacity .25s ease;
+}
+.foot-wrap .result .logo-nezha.pressing,
+.foot-wrap .result .logo-mzread.pressing,
+.foot-wrap .result .link-ticket.pressing {
+  opacity: .5;
 }
 /*# sourceMappingURL=app.css.map */
