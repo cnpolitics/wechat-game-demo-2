@@ -49,9 +49,12 @@
 		if (currQuestIdx === 8) {
 			$.cookie('mzNeZha.result', calcResult(shojo.getScore(SCORE_CHART)));
 			
-			alert('Result: ' + $.cookie('mzNeZha.result')); // For test
+			//alert('Result: ' + $.cookie('mzNeZha.result')); // For test
 		}
 		
 		currQuestIdx++;
 	});
+	
+	window.shojo = shojo;
+	return window.shojo;
 })();
