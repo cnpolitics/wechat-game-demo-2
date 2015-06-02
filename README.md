@@ -9,4 +9,7 @@
 
 - - -
 
+- Change the layout rule of the footer.
+- Fix the positioning issue of the result's footer in the large-width viewport.
+
 - Optimize min-height of the page for Android (e.g. Nexus 5).
