@@ -639,8 +639,8 @@ a {
 .copy-wrap .share-widget.active .share-btn {
   -webkit-transform: scale3d(1, 1, 1);
           transform: scale3d(1, 1, 1);
-  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
-          transition: transform 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  -webkit-transition: -webkit-transform 1s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+          transition: transform 1s cubic-bezier(0.18, 0.89, 0.32, 1.28);
 }
 .copy-wrap .share-widget.active .share-btn.pressing {
   -webkit-transform: scale3d(1.15, 1.15, 1);
@@ -650,8 +650,8 @@ a {
 }
 .copy-wrap .share-widget.active .share-label {
   opacity: 1;
-  -webkit-transition: opacity 0.3s ease-in-out;
-          transition: opacity 0.3s ease-in-out;
+  -webkit-transition: opacity 0.2s ease-in-out 1s;
+          transition: opacity 0.2s ease-in-out 1s;
 }
 .foot-wrap {
   position: relative;
@@ -776,14 +776,14 @@ a {
   bottom: 0;
   right: 0;
   display: inline-block;
-  width: 4.125em;
+  width: 5.375em;
   vertical-align: top;
   text-align: right;
   line-height: 1;
 }
 .foot-wrap .result .link-ticket span {
   display: inline-block;
-  width: 5em;
+  width: 6em;
   height: 2.4em;
   padding: 0.6em 0.4em 0.6em 0;
   color: #871a1f;
@@ -816,13 +816,39 @@ a {
 .foot-wrap .result .logo-nezha,
 .foot-wrap .result .logo-mzread,
 .foot-wrap .result .link-ticket {
-  opacity: 1;
-  -webkit-transition: opacity .25s ease;
-          transition: opacity .25s ease;
+  opacity: 0;
+  -webkit-transform: scale3d(0.75, 0.75, 1);
+          transform: scale3d(0.75, 0.75, 1);
 }
-.foot-wrap .result .logo-nezha.pressing,
-.foot-wrap .result .logo-mzread.pressing,
-.foot-wrap .result .link-ticket.pressing {
+.foot-wrap .result.active {
+  opacity: 1;
+}
+.foot-wrap .result.active.delay .logo-nezha {
+  -webkit-transition-delay: .5s !important;
+          transition-delay: .5s !important;
+}
+.foot-wrap .result.active.delay .logo-mzread {
+  -webkit-transition-delay: 1s !important;
+          transition-delay: 1s !important;
+}
+.foot-wrap .result.active.delay .link-ticket {
+  -webkit-transition-delay: 1.5s !important;
+          transition-delay: 1.5s !important;
+}
+.foot-wrap .result.active .logo-nezha,
+.foot-wrap .result.active .logo-mzread,
+.foot-wrap .result.active .link-ticket {
+  opacity: 1;
+  -webkit-transform: scale3d(1, 1, 1);
+          transform: scale3d(1, 1, 1);
+  -webkit-transition: opacity 1s ease-in-out, -webkit-transform 1s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+          transition: opacity 1s ease-in-out, transform 1s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+.foot-wrap .result.active .logo-nezha.pressing,
+.foot-wrap .result.active .logo-mzread.pressing,
+.foot-wrap .result.active .link-ticket.pressing {
   opacity: .5;
+  -webkit-transition: opacity 0.2s ease-out;
+          transition: opacity 0.2s ease-out;
 }
 /*# sourceMappingURL=app.css.map */
