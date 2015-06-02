@@ -512,6 +512,7 @@ a {
   padding-right: 1em;
   /* Centering the result copies */
   /* Spite positioning */
+  /* Share widget */
 }
 @media (min-width: 350px) {
   .copy-wrap {
@@ -528,6 +529,7 @@ a {
   }
 }
 .copy-wrap .copy {
+  position: relative;
   width: 18em;
   height: 12.5em;
   background-image: url(copy-sprit@2x.png);
@@ -587,6 +589,65 @@ a {
 .copy-wrap .result-4 {
   background-position: -216em 0;
 }
+.copy-wrap .share-widget {
+  position: absolute;
+  left: 0;
+  top: 65.625vw;
+  padding-top: 7em;
+  width: 100%;
+  height: 4.25em;
+  text-align: center;
+  line-height: 1;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+@media (min-width: 350px) {
+  .copy-wrap .share-widget {
+    top: 70vw;
+  }
+}
+@media (min-width: 380px) {
+  .copy-wrap .share-widget {
+    top: 75vw;
+  }
+}
+.copy-wrap .share-widget .share-btn {
+  width: 3em;
+  height: 3em;
+  vertical-align: top;
+  line-height: 3em;
+  background-image: url(btn-sprite@2x.png);
+  background-size: 21em 3em;
+  background-repeat: no-repeat;
+  background-position: -18em 0;
+  -webkit-transform: scale3d(0, 0, 1);
+          transform: scale3d(0, 0, 1);
+}
+.copy-wrap .share-widget .share-label {
+  margin-top: 1em;
+  color: #871a1f;
+  font-size: 0.625em;
+  opacity: 0;
+}
+.copy-wrap .share-widget.active .share-btn {
+  -webkit-transform: scale3d(1, 1, 1);
+          transform: scale3d(1, 1, 1);
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+          transition: transform 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+.copy-wrap .share-widget.active .share-btn.pressing {
+  -webkit-transform: scale3d(1.15, 1.15, 1);
+          transform: scale3d(1.15, 1.15, 1);
+  -webkit-transition: -webkit-transform 0.2s ease-out;
+          transition: transform 0.2s ease-out;
+}
+.copy-wrap .share-widget.active .share-label {
+  opacity: 1;
+  -webkit-transition: opacity 0.3s ease-in-out;
+          transition: opacity 0.3s ease-in-out;
+}
 .optn-wrap {
   position: relative;
   display: -webkit-box;
@@ -626,7 +687,7 @@ a {
   height: 3em;
   margin-top: 0.5em;
   background-image: url(btn-sprite@2x.png);
-  background-size: 18em 3em;
+  background-size: 21em 3em;
   background-repeat: no-repeat;
   -webkit-transform: scale3d(0, 0, 1);
           transform: scale3d(0, 0, 1);
