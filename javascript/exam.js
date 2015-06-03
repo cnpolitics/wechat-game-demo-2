@@ -47,14 +47,26 @@
 		console.log(userid);
 		
 		if (result === null) {
-			console.log('No result.');
-			return;
-		} else if (userid === shojo.id) {
-			console.log('This is myself.');
-			// View my last result page.
+			console.log('No result. Default cover.');
+			// Show default cover.
+			$('.hero-wrap .cover').addClass('active');
+			$('.main-wrap .copy').addClass('cover');
+			$('.foot-wrap .start-btn').show().addClass('active');
 			
+		} else if (userid === shojo.id) {
+			console.log('This is myself. My last result.');
+			// Show my last result.
+			$('.hero-wrap .result-' + result).addClass('active');
+			$('.main-wrap .copy').addClass('result-' + result);
+			$('.main-wrap .share-widget').show().addClass('active');
+			$('.foot-wrap footer.result').show().addClass('active');
+				
 		} else {
-			// View the custom cover from URL.
+			// Show the custom cover from URL.
+			$('.hero-wrap .result-' + result).addClass('active');
+			$('.main-wrap .copy').addClass('result-' + result);
+			$('.foot-wrap .start-btn').show().addClass('active');
+			
 			switch (result) {
 				case '1':
 					break;
@@ -92,16 +104,16 @@
 			// Write doc title.
 			switch (shojo.result) {
 				case 1:
-					document.title = '没救了！';
+					document.title = '我没救了！你呢？';
 					break;
 				case 2:
-					document.title = '离少女越来越远！';
+					document.title = '我离少女越来越远！你呢？';
 					break;
 				case 3:
-					document.title = '有少女的一面！';
+					document.title = '我有少女的一面！你呢？';
 					break;
 				case 4:
-					document.title = '少女指数爆棚！';
+					document.title = '我少女指数爆棚！你呢？';
 					break;
 				default: 
 
