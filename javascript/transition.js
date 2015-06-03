@@ -1,5 +1,5 @@
 /* global $, shojo */
-(function() {
+(function(shojo) {
 	'use strict';
 	
 	var currQuestIdx = 1,
@@ -7,7 +7,7 @@
 		
 	$('.start-btn').click(function() {
 		// Hero image transtion.
-		$('.hero-image .cover').removeClass('active');
+		$('.hero-image .active').removeClass('active');
 		$('.hero-image .quest-1').addClass('active');
 		
 		// Button transition.
@@ -21,9 +21,7 @@
 		}, 1100);
 		
 		// Copy transition.
-		$('.copy')
-			.removeClass('active cover')
-			.addClass('quest-1');
+		$('.copy').attr('class', 'copy quest-1');
 		setTimeout(function() {
 			$('.copy').addClass('active');
 		}, 750);
@@ -84,4 +82,4 @@
 		currQuestIdx = nextQuestIdx;
 		nextQuestIdx++;
 	});
-})();
+})(shojo);
