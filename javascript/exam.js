@@ -54,13 +54,21 @@
 			$('.foot-wrap .start-btn').show().addClass('active');
 			
 		} else if (userid === shojo.id) {
-			console.log('This is myself. My last result.');
-			// Show my last result.
+			console.log('This is myself. My result.');
+			// Show my result frome the URL.
 			$('.hero-wrap .result-' + result).addClass('active');
 			$('.main-wrap .copy').addClass('result-' + result);
 			$('.main-wrap .share-widget').show().addClass('active');
 			$('.foot-wrap footer.result').show().addClass('active');
-				
+			
+			// Another logic: alway show me the last updated result.
+			/*
+			var myLastResult = $.cookie('mzNeZha.result');
+			$('.hero-wrap .result-' + myLastResult).addClass('active');
+			$('.main-wrap .copy').addClass('result-' + myLastResult);
+			$('.main-wrap .share-widget').show().addClass('active');
+			$('.foot-wrap footer.result').show().addClass('active');
+			*/	
 		} else {
 			// Show the custom cover from URL.
 			$('.hero-wrap .result-' + result).addClass('active');
