@@ -1,5 +1,5 @@
 /* global $, shojo */
-(function() {
+(function(shojo) {
 	'use strict';
 	
 	var currQuestIdx = 1,
@@ -84,4 +84,4 @@
 		currQuestIdx = nextQuestIdx;
 		nextQuestIdx++;
 	});
-})();
+})(shojo);

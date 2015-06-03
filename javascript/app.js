@@ -1,4 +1,4 @@
-/* global $, FastClick */
+/* global $, FastClick, Shojo */
 $(function() {
     FastClick.attach(document.body);
 });
@@ -11,3 +11,5 @@ $('button, a').on('touchstart', function() {
 		$(this).removeClass('pressing');
 	});
 });
+
+var shojo = new Shojo();
