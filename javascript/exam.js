@@ -35,7 +35,7 @@
 	
 	// Set user ID, and write cookie.
 	shojo.id = $.cookie('mzNeZha.id') || uuid.v4();
-	$.cookie('mzNeZha.id', shojo.id);
+	$.cookie('mzNeZha.id', shojo.id, { expires: 30 });
 	
 	// Parse URL when visit the webpage.
 	$(document).ready(function() {
@@ -104,7 +104,7 @@
 		// Calc result; write cookie, hash URL and doc title.
 		if (currQuestIdx === 8) {
 			// Calc result, and write cookie.
-			$.cookie('mzNeZha.result', calcResult(shojo.getScore(SCORE_CHART)));
+			$.cookie('mzNeZha.result', calcResult(shojo.getScore(SCORE_CHART)), { expires: 30 });
 			
 			// Write hash URL.
 			window.location.hash = 'result=' + shojo.result + '&id=' + shojo.id;
