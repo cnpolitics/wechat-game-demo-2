@@ -11,7 +11,7 @@ html(lang="en")
 				img(src="assets/tearpaper-lower.png")
 				
 			figure.hero-image
-				img(src="assets/hero-cover.jpg").cover.active
+				img(src="assets/hero-cover.jpg").cover
 				img(src="assets/hero-q1.jpg").quest-1
 				img(src="assets/hero-q2.jpg").quest-2
 				img(src="assets/hero-q3.jpg").quest-3
@@ -27,13 +27,13 @@ html(lang="en")
 		
 		.main-wrap
 			.copy-wrap
-				.copy.cover.active
+				.copy.active
 				.share-widget(style="display:none")
 					button.share-btn
 					p.share-label 分享到朋友圈
 		
 		.foot-wrap
-			button.start-btn.active
+			button.start-btn(style="display:none")
 			button.opt-btn.opt-1(style="display:none", data-opt="1")
 			button.opt-btn.opt-2(style="display:none", data-opt="2")
 			button.opt-btn.opt-3(style="display:none", data-opt="3")
