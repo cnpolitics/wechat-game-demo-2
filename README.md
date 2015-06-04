@@ -4,3 +4,7 @@
 2. Release v0.3.
 3. Update the copies and fonts.
 4. Proof the photos.
+
+---
+
+5. Preload optimization.
