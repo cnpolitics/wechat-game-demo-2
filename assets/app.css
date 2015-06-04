@@ -502,12 +502,12 @@ a {
 }
 .main-wrap {
   min-height: 100%;
-  margin-bottom: -5.5em;
+  margin-bottom: -5em;
 }
 .main-wrap:after {
   content: "";
   display: block;
-  height: 5.5em;
+  height: 5em;
 }
 .copy-wrap {
   position: relative;
@@ -519,16 +519,24 @@ a {
   /* Spite positioning */
   /* Share widget */
 }
-@media (min-width: 350px) {
+@media (min-height: 568px) {
   .copy-wrap {
     padding-top: 70vw;
+  }
+}
+@media (min-height: 672px) {
+  .copy-wrap {
+    padding-top: 75vw;
+  }
+}
+@media (min-width: 350px) {
+  .copy-wrap {
     padding-left: 1.5em;
     padding-right: 1.5em;
   }
 }
 @media (min-width: 380px) {
   .copy-wrap {
-    padding-top: 75vw;
     padding-left: 2em;
     padding-right: 2em;
   }
@@ -665,7 +673,7 @@ a {
           justify-content: space-between;
   box-sizing: border-box;
   width: 100%;
-  height: 5.5em;
+  height: 5em;
   max-width: 26em;
   margin-left: auto;
   margin-right: 0;
@@ -692,7 +700,6 @@ a {
 .foot-wrap .opt-btn {
   width: 3em;
   height: 3em;
-  margin-top: 0.5em;
   background-image: url(btn-sprite@2x.png);
   background-size: 21em 3em;
   background-repeat: no-repeat;
