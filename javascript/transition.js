@@ -83,4 +83,36 @@
 		currQuestIdx = nextQuestIdx;
 		nextQuestIdx++;
 	});
+	
+	$('.share-btn').click(function() {
+		$('.modal-wrap, .modal-wrap .share-guide').addClass('active');
+		
+		$('.hero-wrap .active, .hero-wrap .tearpaper-lower img, .main-wrap .active, .foot-wrap .active')
+			.css({
+				'-webkit-filter': 'blur(5px)',
+				'filter': 'blur(5px)',
+				'-webkit-transition': 'filter .3s ease-in-out, -webkit-filter .3s ease-in-out',
+				'transition': 'filter .3s ease-in-out, -webkit-filter .3s ease-in-out'
+			});
+		
+		$('.modal-wrap').click(function() {
+			$('.modal-wrap, .modal-wrap .share-guide').removeClass('active');
+			
+			$('.hero-wrap .active, .hero-wrap .tearpaper-lower img, .main-wrap .active, .foot-wrap .active')
+				.css({
+					'-webkit-filter': 'blur(0px)',
+					'filter': 'blur(0px)'
+				});
+				
+			setTimeout(function() {
+				$('.hero-wrap .active, .hero-wrap .tearpaper-lower img, .main-wrap .active, .foot-wrap .active')
+				.css({
+					'-webkit-filter': '',
+					'filter': '',
+					'-webkit-transition': '',
+					'transition': ''
+				});
+			}, 500);
+		});
+	});
 })(shojo);
