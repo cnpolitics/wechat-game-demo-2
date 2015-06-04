@@ -545,8 +545,10 @@ a {
   position: relative;
   width: 18em;
   height: 12.5em;
-  background-image: url(copy-sprit@2x.png);
-  background-size: 144em 25em;
+  /* Hack for MQQBrowser: reduce the size of single sprite. */
+  background-image: url(cover-copy-sprit@2x.png), url(quest-copy-sprit@2x.png);
+  background-size: 90em 12.5em, 144em 12.5em;
+  /* Hack for MQQBrowser END */
   background-repeat: no-repeat;
   opacity: 0;
   -webkit-transition: opacity 0.75s ease-in-out, background-position 0s linear 0.75s;
@@ -564,43 +566,43 @@ a {
   margin: 0 auto;
 }
 .copy-wrap .cover {
-  background-position: 0 0;
-}
-.copy-wrap .quest-1 {
-  background-position: 0em -12.5em;
-}
-.copy-wrap .quest-2 {
-  background-position: -18em -12.5em;
-}
-.copy-wrap .quest-3 {
-  background-position: -36em -12.5em;
-}
-.copy-wrap .quest-4 {
-  background-position: -54em -12.5em;
-}
-.copy-wrap .quest-5 {
-  background-position: -72em -12.5em;
-}
-.copy-wrap .quest-6 {
-  background-position: -90em -12.5em;
-}
-.copy-wrap .quest-7 {
-  background-position: -108em -12.5em;
-}
-.copy-wrap .quest-8 {
-  background-position: -126em -12.5em;
+  background-position: 0em 0, 18em 0;
 }
 .copy-wrap .result-1 {
-  background-position: -18em 0;
+  background-position: -18em 0, 18em 0;
 }
 .copy-wrap .result-2 {
-  background-position: -36em 0;
+  background-position: -36em 0, 18em 0;
 }
 .copy-wrap .result-3 {
-  background-position: -54em 0;
+  background-position: -54em 0, 18em 0;
 }
 .copy-wrap .result-4 {
-  background-position: -72em 0;
+  background-position: -72em 0, 18em 0;
+}
+.copy-wrap .quest-1 {
+  background-position: 18em 0, 0em 0;
+}
+.copy-wrap .quest-2 {
+  background-position: 18em 0, -18em 0;
+}
+.copy-wrap .quest-3 {
+  background-position: 18em 0, -36em 0;
+}
+.copy-wrap .quest-4 {
+  background-position: 18em 0, -54em 0;
+}
+.copy-wrap .quest-5 {
+  background-position: 18em 0, -72em 0;
+}
+.copy-wrap .quest-6 {
+  background-position: 18em 0, -90em 0;
+}
+.copy-wrap .quest-7 {
+  background-position: 18em 0, -108em 0;
+}
+.copy-wrap .quest-8 {
+  background-position: 18em 0, -126em 0;
 }
 .copy-wrap .share-widget {
   position: absolute;
