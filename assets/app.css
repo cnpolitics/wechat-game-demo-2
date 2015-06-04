@@ -538,6 +538,7 @@ a {
 }
 @media (min-width: 380px) {
   .copy-wrap {
+    padding-top: 75vw;
     padding-left: 2em;
     padding-right: 2em;
   }
@@ -766,6 +767,10 @@ a {
 .foot-wrap .delay.opt-5 {
   -webkit-transition-delay: .4s !important;
           transition-delay: .4s !important;
+}
+.foot-wrap.result {
+  max-width: none;
+  margin-right: auto;
 }
 .foot-wrap .result {
   position: relative;
