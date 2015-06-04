@@ -1,6 +1,8 @@
+/* Sticky footer */
 .main-wrap {
 	min-height: 100%;
 	margin-bottom: (-80em/16);
+	
 	&:after {
 		content: "";
 		display: block;
@@ -11,6 +13,7 @@
 .copy-wrap {
 	position: relative;
 	min-height: 100%;
+	
 	padding-top: 65.625vw;
 	@media (min-height: 568px) {
 		padding-top: 70vw;
@@ -18,15 +21,14 @@
 	@media (min-height: 672px) {
 		padding-top: 75vw;
 	}
+	
 	padding-left: 1em;
 	padding-right: 1em;
 	@media (min-width: 350px) {
-//		padding-top: 70vw;
 		padding-left: 1.5em;
 		padding-right: 1.5em;	
 	}
 	@media (min-width: 380px) {
-//		padding-top: 75vw;
 		padding-left: 2em;
 		padding-right: 2em;	
 	}

@@ -3,7 +3,7 @@
 	'use strict';
 	
 	var currQuestIdx = 1,
-	    nextQuestIdx = 2;
+		nextQuestIdx = 2;
 		
 	$('.start-btn').click(function() {
 		// Hero image transtion.

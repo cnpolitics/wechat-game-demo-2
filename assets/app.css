@@ -500,6 +500,7 @@ a {
   width: 100%;
   height: 100%;
 }
+/* Sticky footer */
 .main-wrap {
   min-height: 100%;
   margin-bottom: -5em;
@@ -676,6 +677,7 @@ a {
   box-sizing: border-box;
   width: 100%;
   height: 5em;
+  /* Sticky footer reference */
   max-width: 26em;
   margin-left: auto;
   margin-right: 0;
