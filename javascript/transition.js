@@ -37,6 +37,7 @@
 			$('.hero-image .result-' + shojo.result).addClass('active');
 			
 			// Button/footer transition.
+			$('.foot-wrap').addClass('result');
 			$('.opt-btn').addClass('delay').removeClass('active');
 			setTimeout(function() {
 				$('.opt-btn').hide();

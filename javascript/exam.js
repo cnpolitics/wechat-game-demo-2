@@ -59,6 +59,7 @@
 			$('.hero-wrap .result-' + result).addClass('active');
 			$('.main-wrap .copy').addClass('result-' + result);
 			$('.main-wrap .share-widget').show().addClass('active');
+			$('.foot-wrap').addClass('result');
 			$('.foot-wrap footer.result').show().addClass('active');
 			
 			// Another logic: alway show me the last updated result.
