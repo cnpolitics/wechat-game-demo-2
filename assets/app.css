@@ -500,14 +500,15 @@ a {
   width: 100%;
   height: 100%;
 }
+/* Sticky footer */
 .main-wrap {
   min-height: 100%;
-  margin-bottom: -5.5em;
+  margin-bottom: -5em;
 }
 .main-wrap:after {
   content: "";
   display: block;
-  height: 5.5em;
+  height: 5em;
 }
 .copy-wrap {
   position: relative;
@@ -519,9 +520,18 @@ a {
   /* Spite positioning */
   /* Share widget */
 }
-@media (min-width: 350px) {
+@media (min-height: 568px) {
   .copy-wrap {
     padding-top: 70vw;
+  }
+}
+@media (min-height: 672px) {
+  .copy-wrap {
+    padding-top: 75vw;
+  }
+}
+@media (min-width: 350px) {
+  .copy-wrap {
     padding-left: 1.5em;
     padding-right: 1.5em;
   }
@@ -537,8 +547,10 @@ a {
   position: relative;
   width: 18em;
   height: 12.5em;
-  background-image: url(copy-sprit@2x.png);
-  background-size: 144em 25em;
+  /* Hack for MQQBrowser: reduce the size of single sprite. */
+  background-image: url(cover-copy-sprit@2x.png), url(quest-copy-sprit@2x.png);
+  background-size: 90em 12.5em, 144em 12.5em;
+  /* Hack for MQQBrowser END */
   background-repeat: no-repeat;
   opacity: 0;
   -webkit-transition: opacity 0.75s ease-in-out, background-position 0s linear 0.75s;
@@ -556,43 +568,43 @@ a {
   margin: 0 auto;
 }
 .copy-wrap .cover {
-  background-position: 0 0;
-}
-.copy-wrap .quest-1 {
-  background-position: 0em -12.5em;
-}
-.copy-wrap .quest-2 {
-  background-position: -18em -12.5em;
-}
-.copy-wrap .quest-3 {
-  background-position: -36em -12.5em;
-}
-.copy-wrap .quest-4 {
-  background-position: -54em -12.5em;
-}
-.copy-wrap .quest-5 {
-  background-position: -72em -12.5em;
-}
-.copy-wrap .quest-6 {
-  background-position: -90em -12.5em;
-}
-.copy-wrap .quest-7 {
-  background-position: -108em -12.5em;
-}
-.copy-wrap .quest-8 {
-  background-position: -126em -12.5em;
+  background-position: 0em 0, 18em 0;
 }
 .copy-wrap .result-1 {
-  background-position: -18em 0;
+  background-position: -18em 0, 18em 0;
 }
 .copy-wrap .result-2 {
-  background-position: -36em 0;
+  background-position: -36em 0, 18em 0;
 }
 .copy-wrap .result-3 {
-  background-position: -54em 0;
+  background-position: -54em 0, 18em 0;
 }
 .copy-wrap .result-4 {
-  background-position: -72em 0;
+  background-position: -72em 0, 18em 0;
+}
+.copy-wrap .quest-1 {
+  background-position: 18em 0, 0em 0;
+}
+.copy-wrap .quest-2 {
+  background-position: 18em 0, -18em 0;
+}
+.copy-wrap .quest-3 {
+  background-position: 18em 0, -36em 0;
+}
+.copy-wrap .quest-4 {
+  background-position: 18em 0, -54em 0;
+}
+.copy-wrap .quest-5 {
+  background-position: 18em 0, -72em 0;
+}
+.copy-wrap .quest-6 {
+  background-position: 18em 0, -90em 0;
+}
+.copy-wrap .quest-7 {
+  background-position: 18em 0, -108em 0;
+}
+.copy-wrap .quest-8 {
+  background-position: 18em 0, -126em 0;
 }
 .copy-wrap .share-widget {
   position: absolute;
@@ -665,7 +677,8 @@ a {
           justify-content: space-between;
   box-sizing: border-box;
   width: 100%;
-  height: 5.5em;
+  height: 5em;
+  /* Sticky footer reference */
   max-width: 26em;
   margin-left: auto;
   margin-right: 0;
@@ -692,7 +705,6 @@ a {
 .foot-wrap .opt-btn {
   width: 3em;
   height: 3em;
-  margin-top: 0.5em;
   background-image: url(btn-sprite@2x.png);
   background-size: 21em 3em;
   background-repeat: no-repeat;
@@ -755,6 +767,10 @@ a {
 .foot-wrap .delay.opt-5 {
   -webkit-transition-delay: .4s !important;
           transition-delay: .4s !important;
+}
+.foot-wrap.result {
+  max-width: none;
+  margin-right: auto;
 }
 .foot-wrap .result {
   position: relative;

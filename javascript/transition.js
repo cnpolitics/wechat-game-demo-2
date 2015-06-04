@@ -3,7 +3,7 @@
 	'use strict';
 	
 	var currQuestIdx = 1,
-	    nextQuestIdx = 2;
+		nextQuestIdx = 2;
 		
 	$('.start-btn').click(function() {
 		// Hero image transtion.
@@ -37,6 +37,7 @@
 			$('.hero-image .result-' + shojo.result).addClass('active');
 			
 			// Button/footer transition.
+			$('.foot-wrap').addClass('result');
 			$('.opt-btn').addClass('delay').removeClass('active');
 			setTimeout(function() {
 				$('.opt-btn').hide();
