@@ -520,12 +520,12 @@ a {
   /* Spite positioning */
   /* Share widget */
 }
-@media (min-height: 568px) {
+@media (min-height: 560px) {
   .copy-wrap {
     padding-top: 70vw;
   }
 }
-@media (min-height: 672px) {
+@media (min-height: 670px) {
   .copy-wrap {
     padding-top: 75vw;
   }
