@@ -479,8 +479,8 @@ a {
   -webkit-transform: scale3d(1, 1, 1);
           transform: scale3d(1, 1, 1);
   will-change: opacity, filter, transform;
-  -webkit-transition: visibility 0s linear 0s, opacity 1.25s ease-in-out 0.15s, filter 1.75s ease-in-out, -webkit-filter 1.25s ease-in-out 0.15s, -webkit-transform 1.25s ease-in-out 0.15s;
-          transition: visibility 0s linear 0s, opacity 1.25s ease-in-out 0.15s, filter 1.75s ease-in-out, -webkit-filter 1.25s ease-in-out 0.15s, transform 1.25s ease-in-out 0.15s;
+  -webkit-transition: visibility 0s linear 0s, opacity 1.25s ease-in-out 0.15s, filter 1.25s ease-in-out 0.15s, -webkit-filter 1.25s ease-in-out 0.15s, -webkit-transform 1.25s ease-in-out 0.15s;
+          transition: visibility 0s linear 0s, opacity 1.25s ease-in-out 0.15s, filter 1.25s ease-in-out 0.15s, -webkit-filter 1.25s ease-in-out 0.15s, transform 1.25s ease-in-out 0.15s;
 }
 .hero-wrap .tearpaper-lower {
   position: absolute;
@@ -500,14 +500,15 @@ a {
   width: 100%;
   height: 100%;
 }
+/* Sticky footer */
 .main-wrap {
   min-height: 100%;
-  margin-bottom: -5.5em;
+  margin-bottom: -5em;
 }
 .main-wrap:after {
   content: "";
   display: block;
-  height: 5.5em;
+  height: 5em;
 }
 .copy-wrap {
   position: relative;
@@ -519,9 +520,18 @@ a {
   /* Spite positioning */
   /* Share widget */
 }
-@media (min-width: 350px) {
+@media (min-height: 560px) {
   .copy-wrap {
     padding-top: 70vw;
+  }
+}
+@media (min-height: 670px) {
+  .copy-wrap {
+    padding-top: 75vw;
+  }
+}
+@media (min-width: 350px) {
+  .copy-wrap {
     padding-left: 1.5em;
     padding-right: 1.5em;
   }
@@ -537,8 +547,10 @@ a {
   position: relative;
   width: 18em;
   height: 12.5em;
-  background-image: url(copy-sprit@2x.png);
-  background-size: 144em 25em;
+  /* Hack for MQQBrowser: reduce the size of single sprite. */
+  background-image: url(cover-copy-sprit@2x.png), url(quest-copy-sprit@2x.png);
+  background-size: 90em 12.5em, 144em 12.5em;
+  /* Hack for MQQBrowser END */
   background-repeat: no-repeat;
   opacity: 0;
   -webkit-transition: opacity 0.75s ease-in-out, background-position 0s linear 0.75s;
@@ -556,43 +568,43 @@ a {
   margin: 0 auto;
 }
 .copy-wrap .cover {
-  background-position: 0 0;
-}
-.copy-wrap .quest-1 {
-  background-position: 0em -12.5em;
-}
-.copy-wrap .quest-2 {
-  background-position: -18em -12.5em;
-}
-.copy-wrap .quest-3 {
-  background-position: -36em -12.5em;
-}
-.copy-wrap .quest-4 {
-  background-position: -54em -12.5em;
-}
-.copy-wrap .quest-5 {
-  background-position: -72em -12.5em;
-}
-.copy-wrap .quest-6 {
-  background-position: -90em -12.5em;
-}
-.copy-wrap .quest-7 {
-  background-position: -108em -12.5em;
-}
-.copy-wrap .quest-8 {
-  background-position: -126em -12.5em;
+  background-position: 0em 0, 18em 0;
 }
 .copy-wrap .result-1 {
-  background-position: -18em 0;
+  background-position: -18em 0, 18em 0;
 }
 .copy-wrap .result-2 {
-  background-position: -36em 0;
+  background-position: -36em 0, 18em 0;
 }
 .copy-wrap .result-3 {
-  background-position: -54em 0;
+  background-position: -54em 0, 18em 0;
 }
 .copy-wrap .result-4 {
-  background-position: -72em 0;
+  background-position: -72em 0, 18em 0;
+}
+.copy-wrap .quest-1 {
+  background-position: 18em 0, 0em 0;
+}
+.copy-wrap .quest-2 {
+  background-position: 18em 0, -18em 0;
+}
+.copy-wrap .quest-3 {
+  background-position: 18em 0, -36em 0;
+}
+.copy-wrap .quest-4 {
+  background-position: 18em 0, -54em 0;
+}
+.copy-wrap .quest-5 {
+  background-position: 18em 0, -72em 0;
+}
+.copy-wrap .quest-6 {
+  background-position: 18em 0, -90em 0;
+}
+.copy-wrap .quest-7 {
+  background-position: 18em 0, -108em 0;
+}
+.copy-wrap .quest-8 {
+  background-position: 18em 0, -126em 0;
 }
 .copy-wrap .share-widget {
   position: absolute;
@@ -624,7 +636,7 @@ a {
   vertical-align: top;
   line-height: 3em;
   background-image: url(btn-sprite@2x.png);
-  background-size: 21em 3em;
+  background-size: 27em 3em;
   background-repeat: no-repeat;
   background-position: -18em 0;
   -webkit-transform: scale3d(0, 0, 1);
@@ -665,7 +677,8 @@ a {
           justify-content: space-between;
   box-sizing: border-box;
   width: 100%;
-  height: 5.5em;
+  height: 5em;
+  /* Sticky footer reference */
   max-width: 26em;
   margin-left: auto;
   margin-right: 0;
@@ -692,9 +705,8 @@ a {
 .foot-wrap .opt-btn {
   width: 3em;
   height: 3em;
-  margin-top: 0.5em;
   background-image: url(btn-sprite@2x.png);
-  background-size: 21em 3em;
+  background-size: 27em 3em;
   background-repeat: no-repeat;
   -webkit-transform: scale3d(0, 0, 1);
           transform: scale3d(0, 0, 1);
@@ -755,6 +767,10 @@ a {
 .foot-wrap .delay.opt-5 {
   -webkit-transition-delay: .4s !important;
           transition-delay: .4s !important;
+}
+.foot-wrap.result {
+  max-width: none;
+  margin-right: auto;
 }
 .foot-wrap .result {
   position: relative;
@@ -850,5 +866,106 @@ a {
   opacity: .5;
   -webkit-transition: opacity 0.2s ease-out;
           transition: opacity 0.2s ease-out;
+}
+.modal-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1000;
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  will-change: z-index, visibility;
+  -webkit-transition: z-index 0s linear 0.5s, visibility 0s linear 0.5s;
+          transition: z-index 0s linear 0.5s, visibility 0s linear 0.5s;
+}
+.modal-wrap.active {
+  z-index: 1000;
+  visibility: visible;
+  -webkit-transition: z-index 0s linear 0s, visibility 0s linear 0s;
+          transition: z-index 0s linear 0s, visibility 0s linear 0s;
+}
+.modal-wrap .share-guide {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.85);
+  opacity: 0;
+  will-change: opacity;
+  -webkit-transition: opacity 0.5s ease-in-out 0s;
+          transition: opacity 0.5s ease-in-out 0s;
+}
+.modal-wrap .share-guide.active {
+  opacity: 1;
+  -webkit-transition: opacity 0.5s ease-in-out 0s;
+          transition: opacity 0.5s ease-in-out 0s;
+}
+.modal-wrap .share-guide button {
+  position: absolute;
+  top: 0.66666667em;
+  right: 0.66666667em;
+  width: 8em;
+  height: 1em;
+  box-sizing: content-box;
+  padding-top: 2.25em;
+  padding-bottom: 0.75em;
+  /* Sprite positioning */
+  background-image: url(btn-sprite@2x.png);
+  background-size: 36em 4em;
+  background-repeat: no-repeat;
+  background-position: -28em 0;
+  color: #871a1f;
+  font-size: 0.75em;
+  line-height: 1;
+  will-change: transform;
+}
+.modal-wrap .share-guide.active button {
+  -webkit-animation: spring-bubble 1.25s ease-in-out 0.75s infinite;
+          animation: spring-bubble 1.25s ease-in-out 0.75s infinite;
+}
+@-webkit-keyframes spring-bubble {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  5% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  65% {
+    -webkit-transform: translate3d(0, 0.66667em, 0);
+            transform: translate3d(0, 0.66667em, 0);
+  }
+  95% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes spring-bubble {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  5% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  65% {
+    -webkit-transform: translate3d(0, 0.66667em, 0);
+            transform: translate3d(0, 0.66667em, 0);
+  }
+  95% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
 }
 /*# sourceMappingURL=app.css.map */

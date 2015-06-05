@@ -1,21 +1,30 @@
+/* Sticky footer */
 .main-wrap {
 	min-height: 100%;
-	margin-bottom: (-88em/16);
+	margin-bottom: (-80em/16);
+	
 	&:after {
 		content: "";
 		display: block;
-		height: (88em/16);
+		height: (80em/16);
 	}
 }
 
 .copy-wrap {
 	position: relative;
 	min-height: 100%;
+	
 	padding-top: 65.625vw;
+	@media (min-height: 560px) {
+		padding-top: 70vw;
+	}
+	@media (min-height: 670px) {
+		padding-top: 75vw;
+	}
+	
 	padding-left: 1em;
 	padding-right: 1em;
 	@media (min-width: 350px) {
-		padding-top: 70vw;
 		padding-left: 1.5em;
 		padding-right: 1.5em;	
 	}
@@ -29,8 +38,10 @@
 		position: relative;
 		width: (288em/16);
 		height: (200em/16);
-		background-image: url(copy-sprit@2x.png);
-		background-size: (4608em/2/16) (800em/2/16);
+		/* Hack for MQQBrowser: reduce the size of single sprite. */
+		background-image: url(cover-copy-sprit@2x.png), url(quest-copy-sprit@2x.png);
+		background-size: (2880em/2/16) (400em/2/16), (4608em/2/16) (400em/2/16);
+		/* Hack for MQQBrowser END */
 		background-repeat: no-repeat;
 		opacity: 0;
 		transition: opacity .75s ease-in-out, background-position 0s linear .75s;
@@ -50,20 +61,20 @@
 	}
 	
 	/* Spite positioning */
-	.cover { background-position: 0 0; }
-	.quest-1 { background-position: (-288em/16*0) (-200em/16); }
-	.quest-2 { background-position: (-288em/16*1) (-200em/16); }
-	.quest-3 { background-position: (-288em/16*2) (-200em/16); }
-	.quest-4 { background-position: (-288em/16*3) (-200em/16); }
-	.quest-5 { background-position: (-288em/16*4) (-200em/16); }
-	.quest-6 { background-position: (-288em/16*5) (-200em/16); }
-	.quest-7 { background-position: (-288em/16*6) (-200em/16); }
-	.quest-8 { background-position: (-288em/16*7) (-200em/16); }
-	.result-1 { background-position: (-288em/16*1) 0; }
-	.result-2 { background-position: (-288em/16*2) 0; }
-	.result-3 { background-position: (-288em/16*3) 0; }
-	.result-4 { background-position: (-288em/16*4) 0; }
-	
+	.cover {background-position: (-288em/16*0) 0, (288em/16*1) 0; }
+	.result-1 { background-position: (-288em/16*1) 0, (288em/16*1) 0; }
+	.result-2 { background-position: (-288em/16*2) 0, (288em/16*1) 0; }
+	.result-3 { background-position: (-288em/16*3) 0, (288em/16*1) 0; }
+	.result-4 { background-position: (-288em/16*4) 0, (288em/16*1) 0; }
+	.quest-1 { background-position: (288em/16*1) 0, (-288em/16*0) 0; }
+	.quest-2 { background-position: (288em/16*1) 0, (-288em/16*1) 0; }
+	.quest-3 { background-position: (288em/16*1) 0, (-288em/16*2) 0; }
+	.quest-4 { background-position: (288em/16*1) 0, (-288em/16*3) 0; }
+	.quest-5 { background-position: (288em/16*1) 0, (-288em/16*4) 0; }
+	.quest-6 { background-position: (288em/16*1) 0, (-288em/16*5) 0; }
+	.quest-7 { background-position: (288em/16*1) 0, (-288em/16*6) 0; }
+	.quest-8 { background-position: (288em/16*1) 0, (-288em/16*7) 0; }
+
 	/* Share widget */
 	.share-widget {
 		position: absolute;
@@ -84,7 +95,7 @@
 			vertical-align: top;
 			line-height: (48em/16);
 			background-image: url(btn-sprite@2x.png);
-			background-size: (672em/2/16) (96em/2/16);
+			background-size: (864em/2/16) (96em/2/16);
 			background-repeat: no-repeat;
 			background-position: (-48em/16*6) 0;
 			transform: scale3d(0, 0, 1);

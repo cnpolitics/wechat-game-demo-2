@@ -4,12 +4,15 @@ html(lang="en")
 	-var pageDisc = "少女指数测试｜少女哪吒｜拇指阅读"
 	-var pageKeyw = "少女, 指数, 测试, 少女哪吒, 电影, 微信, 微信公众号, 朋友圈, 拇指阅读, MZRead, WeChat"
 	include _head.jade
-	
+
 	body
+		.wechat-thumb(style="display:none")
+			img(src="assets/wechat-thumb.jpg")
+
 		.hero-wrap
 			.tearpaper-lower
 				img(src="assets/tearpaper-lower.png")
-				
+	
 			figure.hero-image
 				img(src="assets/hero-cover.jpg").cover
 				img(src="assets/hero-q1.jpg").quest-1
@@ -24,14 +27,14 @@ html(lang="en")
 				img(src="assets/hero-r2.jpg").result-2
 				img(src="assets/hero-r3.jpg").result-3
 				img(src="assets/hero-r4.jpg").result-4
-		
+
 		.main-wrap
 			.copy-wrap
 				.copy.active
 				.share-widget(style="display:none")
 					button.share-btn
 					p.share-label 分享到朋友圈
-		
+
 		.foot-wrap
 			button.start-btn(style="display:none")
 			button.opt-btn.opt-1(style="display:none", data-opt="1")
@@ -40,10 +43,14 @@ html(lang="en")
 			button.opt-btn.opt-4(style="display:none", data-opt="4")
 			button.opt-btn.opt-5(style="display:none", data-opt="5")
 			footer.result(style="display:none")
-				a.logo-nezha(href="#")
+				a.logo-nezha(href="http://mzread.com")
 				a.logo-mzread(href="http://mzread.com")
-				a.link-ticket(href="#")
+				a.link-ticket(href="http://mzread.com")
 					span 去格瓦拉买<br>打折电影票
 					i
+
+		.modal-wrap
+			div.share-guide
+				button 分享到朋友圈
 
 	script(type="text/javascript" src="assets/app.js")
