@@ -79,12 +79,12 @@
 			height: (36em/16);
 		}
 		
-		.link-ticket {
+		.share-btn {
 			position: absolute;
 			bottom: 0;
 			right: 0;
 			display: inline-block;
-			width: ((60em + 10 + 4 + 12) / 16);
+			width: ((60em + 10 + 4 + 32) / 16);
 			vertical-align: top;
 			text-align: right;
 			line-height: 1;
@@ -102,7 +102,7 @@
 			
 			i {
 				display: inline-block;
-				width: (12em/16);
+				width: (32em/16);
 				height: (36em/16);
 				vertical-align: top;
 			}
@@ -111,19 +111,19 @@
 		/* Spite positioning */
 		.logo-nezha,
 		.logo-mzread,
-		.link-ticket i {
+		.share-btn i {
 			background-image: url(footer-sprite@2x.png);
-			background-size: (384em/2/16) (72em/2/16);
+			background-size: (424em/2/16) (72em/2/16);
 			background-repeat: no-repeat;
 		}
 		.logo-nezha { background-position: 0 0; }
 		.logo-mzread { background-position: (-90em/16*1) 0; }
-		.link-ticket i { background-position: (-90em/16*2) 0;}
+		.share-btn i { background-position: (-90em/16*2) 0;}
 		
 		/* Transitions */
 		.logo-nezha,
 		.logo-mzread,
-		.link-ticket {
+		.share-btn {
 			opacity: 0;
 			transform: scale3d(0.75, 0.75, 1);
 		}
@@ -133,11 +133,15 @@
 			
 			&.delay .logo-nezha { transition-delay: .5s !important; }
 			&.delay .logo-mzread { transition-delay: 1s !important; }
-			&.delay .link-ticket { transition-delay: 1.5s !important; }
+			&.delay .share-btn { transition-delay: 1.5s !important; }
+			
+			.logo-nezha { transition-delay: .5s !important; }
+			.logo-mzread { transition-delay: 1s !important; }
+			.share-btn { transition-delay: 1.5s !important; }
 			
 			.logo-nezha,
 			.logo-mzread,
-			.link-ticket {
+			.share-btn {
 				opacity: 1;
 				transform: scale3d(1, 1, 1);
 				transition: opacity 1s ease-in-out, transform 1s cubic-bezier(0.18, 0.89, 0.32, 1.28);
