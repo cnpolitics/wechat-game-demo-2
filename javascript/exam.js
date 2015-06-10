@@ -47,20 +47,20 @@
 		result = result ? result.substring(0, 1) : null;
 		userid = userid ? userid.substring(0, 36) : null;
 		flag = flag ? flag.substring(0, 1) : null;
-		console.log('hashURL: ' + hashURL);
-		console.log('result: ' + result);
-		console.log('userid: ' + userid);
-		console.log('flag: ' + flag);
+//		console.log('hashURL: ' + hashURL);
+//		console.log('result: ' + result);
+//		console.log('userid: ' + userid);
+//		console.log('flag: ' + flag);
 		
 		if (result === null) {
-			console.log('No result. Default cover.');
+//			console.log('No result. Default cover.');
 			// Show default cover.
 			$('.hero-wrap .cover').addClass('active');
 			$('.main-wrap .copy').addClass('cover');
 			$('.foot-wrap .start-btn').show().addClass('active');
 			
 		} else if (userid === shojo.id) {
-			console.log('This is myself. My result.');
+//			console.log('This is myself. My result.');
 			// Show my result frome the URL.
 			$('.hero-wrap .result-' + result).addClass('active');
 			$('.main-wrap .copy').addClass('result-' + result);
