@@ -518,6 +518,7 @@ a {
   padding-right: 1em;
   /* Centering the result copies */
   /* Spite positioning */
+  /* Gift widget */
   /* Share widget */
 }
 @media (min-height: 560px) {
@@ -606,7 +607,7 @@ a {
 .copy-wrap .quest-8 {
   background-position: 18em 0, -126em 0;
 }
-.copy-wrap .share-widget {
+.copy-wrap .gift-widget {
   position: absolute;
   left: 0;
   top: 65.625vw;
@@ -621,16 +622,16 @@ a {
           user-select: none;
 }
 @media (min-width: 350px) {
-  .copy-wrap .share-widget {
+  .copy-wrap .gift-widget {
     top: 70vw;
   }
 }
 @media (min-width: 380px) {
-  .copy-wrap .share-widget {
+  .copy-wrap .gift-widget {
     top: 75vw;
   }
 }
-.copy-wrap .share-widget .share-btn {
+.copy-wrap .gift-widget .gift-btn {
   width: 3em;
   height: 3em;
   vertical-align: top;
@@ -642,25 +643,26 @@ a {
   -webkit-transform: scale3d(0, 0, 1);
           transform: scale3d(0, 0, 1);
 }
-.copy-wrap .share-widget .share-label {
-  margin-top: 1em;
-  color: #871a1f;
+.copy-wrap .gift-widget .gift-label {
+  margin-top: .6em;
+  color: #333333;
   font-size: 0.625em;
+  line-height: 1.4;
   opacity: 0;
 }
-.copy-wrap .share-widget.active .share-btn {
+.copy-wrap .gift-widget.active .gift-btn {
   -webkit-transform: scale3d(1, 1, 1);
           transform: scale3d(1, 1, 1);
   -webkit-transition: -webkit-transform 1s cubic-bezier(0.18, 0.89, 0.32, 1.28);
           transition: transform 1s cubic-bezier(0.18, 0.89, 0.32, 1.28);
 }
-.copy-wrap .share-widget.active .share-btn.pressing {
+.copy-wrap .gift-widget.active .gift-btn.pressing {
   -webkit-transform: scale3d(1.15, 1.15, 1);
           transform: scale3d(1.15, 1.15, 1);
   -webkit-transition: -webkit-transform 0.2s ease-out;
           transition: transform 0.2s ease-out;
 }
-.copy-wrap .share-widget.active .share-label {
+.copy-wrap .gift-widget.active .gift-label {
   opacity: 1;
   -webkit-transition: opacity 0.2s ease-in-out 1s;
           transition: opacity 0.2s ease-in-out 1s;
