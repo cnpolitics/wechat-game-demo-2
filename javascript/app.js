@@ -22,6 +22,9 @@ function equidisBtn() {
 }
 $(document).ready(function() {
 	equidisBtn();
+	
+	// For robuster onload rendering.
+	$('.copy').addClass('active');
 });
 $(window).on('resize', function() {
 	equidisBtn();
