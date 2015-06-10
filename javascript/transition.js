@@ -41,7 +41,7 @@
 			$('.opt-btn').addClass('delay').removeClass('active');
 			setTimeout(function() {
 				$('.opt-btn').hide();
-				
+				/*
 				// Result footer transition.
 				setTimeout(function() {
 					$('footer.result').show().addClass('active delay');
@@ -50,6 +50,7 @@
 						$('footer.result').removeClass('delay');
 					}, 2500);
 				}, 1500);
+				*/
 			}, 1100);
 			
 			// Copy transition.
