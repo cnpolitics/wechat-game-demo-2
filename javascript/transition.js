@@ -59,10 +59,17 @@
 			setTimeout(function() {
 				$('.copy').addClass('active');
 				
+				// Gift widget transition.
+				setTimeout(function() {	
+					$('.gift-widget').show().addClass('active');
+				}, 500);
+				
+				/*
 				// Share widget transition.
 				setTimeout(function() {	
 					$('.share-widget').show().addClass('active');
 				}, 500);
+				*/
 			}, 750);
 			
 			return;
@@ -84,9 +91,10 @@
 		nextQuestIdx++;
 	});
 	
+	// Pop on/off the share guide.
 	$('.share-btn').click(function() {
+		// Pop on.
 		$('.modal-wrap, .modal-wrap .share-guide').addClass('active');
-		
 		$('.hero-wrap .active, .hero-wrap .tearpaper-lower img, .main-wrap .active, .foot-wrap .active')
 			.css({
 				'-webkit-filter': 'blur(5px)',
@@ -95,6 +103,7 @@
 				'transition': 'filter .3s ease-in-out, -webkit-filter .3s ease-in-out'
 			});
 		
+		// Pop off.
 		$('.modal-wrap').click(function() {
 			$('.modal-wrap, .modal-wrap .share-guide').removeClass('active');
 			
