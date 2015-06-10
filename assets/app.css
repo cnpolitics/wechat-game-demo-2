@@ -632,6 +632,7 @@ a {
   }
 }
 .copy-wrap .gift-widget .gift-btn {
+  display: inline-block;
   width: 3em;
   height: 3em;
   vertical-align: top;
