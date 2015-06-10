@@ -74,7 +74,7 @@
 		} else {
 			// Show the custom cover from URL.
 			$('.hero-wrap .result-' + result).addClass('active');
-			$('.main-wrap .copy').addClass('result-' + result);
+			$('.main-wrap .copy').addClass('cover-' + result);
 			$('.foot-wrap .start-btn').show().addClass('active');
 			
 			switch (result) {
