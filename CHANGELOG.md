@@ -1,6 +1,6 @@
 # CHANGELOG
 
-- - -
+* * *
 
 ## Ver. 0.0.1 (alpha)
 <http://realfish.bitbucket.org/MZRead-NeZha-V-0-0-1-9d2d18d/>
@@ -11,10 +11,10 @@
 - 低版本安卓系统，页面布局有错误（顶部的照片，底部按钮间距）；
 - 低配置机器上，动态模糊的性能不太行，后面考虑一下退化方案。
 
-- - -
+* * *
 
 ## Ver. 0.2 (beta)
-<http://realfish.bitbucket.org/MZRead-NeZha-V0.2>
+<http://realfish.bitbucket.org/MZRead-NeZha-V0.2/>
 
 ### 新增特性：
 1. 首次访问游戏页面，生成用户 ID，并保留在浏览器 cookie 中（30 天）；
@@ -30,7 +30,7 @@
 
 目前测试版是第 1 种：优先保证用户点开朋友圈自己的旧帖时，看到的结果和帖子的标题相互匹配。
 
-- - -
+* * *
 
 ## Ver. 0.3 (beta)
 
@@ -50,7 +50,7 @@
 2. 调整字体；
 3. 有时间的话，进行预加载优化（因为图片数量比较多）。
 
-- - -
+* * *
 
 ## Ver. 0.4 (beta)
 <http://realfish.bitbucket.org/MZRead-NeZha-V0.4/>
