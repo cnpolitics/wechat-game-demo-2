@@ -40,7 +40,7 @@
 		height: (200em/16);
 		/* Hack for MQQBrowser: reduce the size of single sprite. */
 		background-image: url(cover-copy-sprit@2x.png), url(quest-copy-sprit@2x.png);
-		background-size: (2880em/2/16) (400em/2/16), (4608em/2/16) (400em/2/16);
+		background-size: (5184em/2/16) (400em/2/16), (4608em/2/16) (400em/2/16);
 		/* Hack for MQQBrowser END */
 		background-repeat: no-repeat;
 		opacity: 0;
@@ -52,16 +52,20 @@
 		}
 	}
 	
-	/* Centering the result copies */
+	/* Centering the result copy */
 	.result-1,
 	.result-2,
 	.result-3,
-	.resutl-4 {
+	.result-4 {
 		&.active { margin: 0 auto; }
 	}
 	
 	/* Spite positioning */
 	.cover {background-position: (-288em/16*0) 0, (288em/16*1) 0; }
+	.cover-1 { background-position: (-288em/16*5) 0, (288em/16*1) 0; }
+	.cover-2 { background-position: (-288em/16*6) 0, (288em/16*1) 0; }
+	.cover-3 { background-position: (-288em/16*7) 0, (288em/16*1) 0; }
+	.cover-4 { background-position: (-288em/16*8) 0, (288em/16*1) 0; }	
 	.result-1 { background-position: (-288em/16*1) 0, (288em/16*1) 0; }
 	.result-2 { background-position: (-288em/16*2) 0, (288em/16*1) 0; }
 	.result-3 { background-position: (-288em/16*3) 0, (288em/16*1) 0; }

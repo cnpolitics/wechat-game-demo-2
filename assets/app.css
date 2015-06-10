@@ -516,7 +516,7 @@ a {
   padding-top: 65.625vw;
   padding-left: 1em;
   padding-right: 1em;
-  /* Centering the result copies */
+  /* Centering the result copy */
   /* Spite positioning */
   /* Gift widget */
   /* Share widget */
@@ -550,7 +550,7 @@ a {
   height: 12.5em;
   /* Hack for MQQBrowser: reduce the size of single sprite. */
   background-image: url(cover-copy-sprit@2x.png), url(quest-copy-sprit@2x.png);
-  background-size: 90em 12.5em, 144em 12.5em;
+  background-size: 162em 12.5em, 144em 12.5em;
   /* Hack for MQQBrowser END */
   background-repeat: no-repeat;
   opacity: 0;
@@ -565,11 +565,23 @@ a {
 .copy-wrap .result-1.active,
 .copy-wrap .result-2.active,
 .copy-wrap .result-3.active,
-.copy-wrap .resutl-4.active {
+.copy-wrap .result-4.active {
   margin: 0 auto;
 }
 .copy-wrap .cover {
   background-position: 0em 0, 18em 0;
+}
+.copy-wrap .cover-1 {
+  background-position: -90em 0, 18em 0;
+}
+.copy-wrap .cover-2 {
+  background-position: -108em 0, 18em 0;
+}
+.copy-wrap .cover-3 {
+  background-position: -126em 0, 18em 0;
+}
+.copy-wrap .cover-4 {
+  background-position: -144em 0, 18em 0;
 }
 .copy-wrap .result-1 {
   background-position: -18em 0, 18em 0;
