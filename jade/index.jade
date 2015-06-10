@@ -30,10 +30,10 @@ html(lang="en")
 
 		.main-wrap
 			.copy-wrap
-				.copy.active
-				.share-widget(style="display:none")
-					button.share-btn
-					p.share-label 分享到朋友圈
+				.copy
+				.gift-widget(style="display:none")
+					a(href="test-target.html").gift-btn
+					p.gift-label 少女指数有点低哦，<br>赶紧领个红包恢复下你的少女风采吧！
 
 		.foot-wrap
 			button.start-btn(style="display:none")
@@ -45,8 +45,8 @@ html(lang="en")
 			footer.result(style="display:none")
 				a.logo-nezha(href="http://mzread.com")
 				a.logo-mzread(href="http://mzread.com")
-				a.link-ticket(href="http://mzread.com")
-					span 去格瓦拉买<br>打折电影票
+				a.share-btn(href="javascript:void(0)")
+					span 分享到<br>朋友圈
 					i
 
 		.modal-wrap

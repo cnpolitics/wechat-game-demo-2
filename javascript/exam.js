@@ -41,24 +41,31 @@
 	$(document).ready(function() {
 		var hashURL = window.location.hash;
 		var result = getValueByKey(hashURL, 'result'),
-			userid = getValueByKey(hashURL, 'id');
-		console.log(hashURL);
-		console.log(result);
-		console.log(userid);
+			userid = getValueByKey(hashURL, 'id'),
+			flag = getValueByKey(hashURL, 'flag');
+		
+		result = result ? result.substring(0, 1) : null;
+		userid = userid ? userid.substring(0, 36) : null;
+		flag = flag ? flag.substring(0, 1) : null;
+//		console.log('hashURL: ' + hashURL);
+//		console.log('result: ' + result);
+//		console.log('userid: ' + userid);
+//		console.log('flag: ' + flag);
 		
 		if (result === null) {
-			console.log('No result. Default cover.');
+//			console.log('No result. Default cover.');
 			// Show default cover.
 			$('.hero-wrap .cover').addClass('active');
 			$('.main-wrap .copy').addClass('cover');
 			$('.foot-wrap .start-btn').show().addClass('active');
 			
 		} else if (userid === shojo.id) {
-			console.log('This is myself. My result.');
+//			console.log('This is myself. My result.');
 			// Show my result frome the URL.
 			$('.hero-wrap .result-' + result).addClass('active');
 			$('.main-wrap .copy').addClass('result-' + result);
-			$('.main-wrap .share-widget').show().addClass('active');
+			//$('.main-wrap .share-widget').show().addClass('active');
+			$('.main-wrap .gift-widget').show().addClass('active');
 			$('.foot-wrap').addClass('result');
 			$('.foot-wrap footer.result').show().addClass('active');
 			
@@ -73,7 +80,7 @@
 		} else {
 			// Show the custom cover from URL.
 			$('.hero-wrap .result-' + result).addClass('active');
-			$('.main-wrap .copy').addClass('result-' + result);
+			$('.main-wrap .copy').addClass('cover-' + result);
 			$('.foot-wrap .start-btn').show().addClass('active');
 			
 			switch (result) {
@@ -114,15 +121,19 @@
 			switch (shojo.result) {
 				case 1:
 					document.title = '我没救了！你呢？';
+//					history.replaceState({result: '1'}, '我没救了！你呢？', '#' + 'result=' + shojo.result + '&id=' + shojo.id);
 					break;
 				case 2:
 					document.title = '我离少女越来越远！你呢？';
+//					history.replaceState({result: '2'}, '我离少女越来越远！你呢？', '#' + 'result=' + shojo.result + '&id=' + shojo.id);
 					break;
 				case 3:
 					document.title = '我有少女的一面！你呢？';
+//					history.replaceState({result: '3'}, '我有少女的一面！你呢？', '#' + 'result=' + shojo.result + '&id=' + shojo.id);
 					break;
 				case 4:
 					document.title = '我少女指数爆棚！你呢？';
+//					history.replaceState({result: '4'}, '我少女指数爆棚！你呢？', '#' + 'result=' + shojo.result + '&id=' + shojo.id);
 					break;
 				default: 
 
