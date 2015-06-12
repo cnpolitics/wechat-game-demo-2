@@ -22,6 +22,10 @@
 			width: 3em;
 			height: 3em;
 			margin: 0 auto;
+			
+			path {
+				animation: animate-path 2s linear infinite;
+			}
 		}
 		
 		p {
@@ -42,4 +46,9 @@
 				  opacity .35s cubic-bezier(0.6, -0.28, 0.74, 0.05) 1s;
 		}
 	}
+}
+
+@keyframes animate-path {
+	  0% { stroke-dashoffset: 0; }
+	100% { stroke-dashoffset: 64; }
 }
