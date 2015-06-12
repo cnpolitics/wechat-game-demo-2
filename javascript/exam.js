@@ -76,7 +76,25 @@
 			$('.main-wrap .copy').addClass('result-' + myLastResult);
 			$('.main-wrap .share-widget').show().addClass('active');
 			$('.foot-wrap footer.result').show().addClass('active');
-			*/	
+			*/
+			
+			// Write doc title.
+			switch (result) {
+				case '1':
+					document.title = '我没救了！你呢？';
+					break;
+				case '2':
+					document.title = '我离少女越来越远！你呢？';
+					break;
+				case '3':
+					document.title = '我有少女的一面！你呢？';
+					break;
+				case '4':
+					document.title = '我少女指数爆棚！你呢？';
+					break;
+				default:
+
+			}
 		} else {
 			// Show the custom cover from URL.
 			$('.hero-wrap .result-' + result).addClass('active');
