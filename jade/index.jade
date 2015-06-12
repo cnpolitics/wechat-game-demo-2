@@ -4,8 +4,16 @@ html(lang="en")
 	-var pageDisc = "少女指数测试｜少女哪吒｜拇指阅读"
 	-var pageKeyw = "少女, 指数, 测试, 少女哪吒, 电影, 微信, 微信公众号, 朋友圈, 拇指阅读, MZRead, WeChat"
 	include _head.jade
+	
+	//script
+		include ../javascript/load.js
 
 	body
+		.load-screen
+			.load-widget
+				include dashinfinity.svg
+				p 少女指数测试机正在启动	
+
 		.wechat-thumb(style="display:none")
 			img(src="assets/wechat-thumb.jpg")
 
