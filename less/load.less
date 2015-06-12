@@ -17,11 +17,26 @@
 		opacity: 1;
 		transform: translate3d(0, -100%, 0) scale3d(1, 1, 1);
 		
-		svg {
+//		svg {
+//			display: block;
+//			width: 3em;
+//			height: 3em;
+//			margin: 0 auto;
+//			
+//			path {
+//				transform: translate3d(0,0,0);
+//				animation: animate-path 2s linear infinite;
+//			}
+//		}
+		img,
+		div {
 			display: block;
 			width: 3em;
 			height: 3em;
+			background-size: cover;
 			margin: 0 auto;
+			opacity: 0.5;
+			transform: translate3d(0,0,0);
 		}
 		
 		p {
@@ -42,4 +57,9 @@
 				  opacity .35s cubic-bezier(0.6, -0.28, 0.74, 0.05) 1s;
 		}
 	}
+}
+
+@keyframes animate-path {
+	  0% { stroke-dashoffset: 0; }
+	100% { stroke-dashoffset: 64; }
 }
