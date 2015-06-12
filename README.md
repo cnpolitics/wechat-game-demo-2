@@ -1,6 +1,6 @@
 # TODO
 
-3. Update the thumbnail for WeChat.
+2. Update the thumbnail for WeChat.
 
 ---
 
