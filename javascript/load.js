@@ -2,7 +2,7 @@
 	'use strict';
 
 	$(window).load(function() {
-		console.log('test');
+		// console.log('test');
 		$('.load-screen').addClass('active');
 		setTimeout(function() {
 			$('.load-screen').hide();
