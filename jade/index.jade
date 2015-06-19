@@ -13,7 +13,7 @@ html(lang="en")
 				div(style="background-image:url(assets/dashinfinity.gif)")
 				p 少女指数测试机正在启动
 
-		.wechat-thumb(style="")
+		.wechat-thumb(style="display:none")
 			//img(src="assets/wechat-thumb.jpg")
 			img(src="assets/test.bmp")
 
@@ -60,5 +60,9 @@ html(lang="en")
 		.modal-wrap
 			div.share-guide
 				button 分享到朋友圈
+	
+	script(type="text/javascript")
+		| var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+		| document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fb2544bca1b3969d5a434bea6141d59dc' type='text/javascript'%3E%3C/script%3E"));
 
 	script(type="text/javascript" src="assets/app.js")
