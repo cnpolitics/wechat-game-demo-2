@@ -1,4 +1,15 @@
-/* global $, Shojo, uuid, shojo*/
+/* global $, Shojo, uuid, shojo, _hmt*/
+
+/**
+ * References for the Baidu Analytics
+ * _hmt.push(['_trackEvent', 'nezha', 'nezha_click', 'nezha_view_start']);
+ * _hmt.push(['_trackEvent', 'nezha', 'nezha_click', 'nezha_view_score']);
+ * _hmt.push(['_trackEvent', 'nezha', 'nezha_click', 'nezha_button_back2share']);
+ * _hmt.push(['_trackEvent', 'nezha', 'nezha_click', 'nezha_button_shareguide']);
+ * _hmt.push(['_trackEvent', 'nezha', 'nezha_click', 'nezha_link_shaonv']);
+ * _hmt.push(['_trackEvent', 'nezha', 'nezha_click', 'nezha_link_mzread']);
+ */
+
 (function(shojo) {
 	'use strict';
 	
@@ -54,14 +65,18 @@
 		
 		if (result === null) {
 //			console.log('No result. Default cover.');
-			// Show default cover.
+			// Show default cover. Ready to start.
+			
+			// Baidu analytics: Start.
+			_hmt.push(['_trackEvent', 'nezha', 'nezha_click', 'nezha_view_start']);
+			
 			$('.hero-wrap .cover').addClass('active');
 			$('.main-wrap .copy').addClass('cover');
 			$('.foot-wrap .start-btn').show().addClass('active');
 			
 		} else if (userid === shojo.id) {
 //			console.log('This is myself. My result.');
-			// Show my result frome the URL.
+			// Show my result from the URL.
 			$('.hero-wrap .result-' + result).addClass('active');
 			$('.main-wrap .copy').addClass('result-' + result);
 			//$('.main-wrap .share-widget').show().addClass('active');
@@ -96,7 +111,11 @@
 
 			}
 		} else {
-			// Show the custom cover from URL.
+			// Show the custom cover from URL. Ready to start.
+			
+			// Baidu analytics: Start.
+			_hmt.push(['_trackEvent', 'nezha', 'nezha_click', 'nezha_view_start']);
+			
 			$('.hero-wrap .result-' + result).addClass('active');
 			$('.main-wrap .copy').addClass('cover-' + result);
 			$('.foot-wrap .start-btn').show().addClass('active');
@@ -129,6 +148,9 @@
 		
 		// Calc result; write cookie, hash URL and doc title.
 		if (currQuestIdx === 8) {
+			// Baidu analytics: Score.
+			_hmt.push(['_trackEvent', 'nezha', 'nezha_click', 'nezha_view_score']);
+			
 			// Calc result, and write cookie.
 			$.cookie('mzNeZha.result', calcResult(shojo.getScore(SCORE_CHART)), { expires: 30 });
 			
@@ -139,19 +161,19 @@
 			switch (shojo.result) {
 				case 1:
 					document.title = '我没救了！你呢？';
-//					history.replaceState({result: '1'}, '我没救了！你呢？', '#' + 'result=' + shojo.result + '&id=' + shojo.id);
+					// history.replaceState({result: '1'}, '我没救了！你呢？', '#' + 'result=' + shojo.result + '&id=' + shojo.id);
 					break;
 				case 2:
 					document.title = '我离少女越来越远！你呢？';
-//					history.replaceState({result: '2'}, '我离少女越来越远！你呢？', '#' + 'result=' + shojo.result + '&id=' + shojo.id);
+					// history.replaceState({result: '2'}, '我离少女越来越远！你呢？', '#' + 'result=' + shojo.result + '&id=' + shojo.id);
 					break;
 				case 3:
 					document.title = '我有少女的一面！你呢？';
-//					history.replaceState({result: '3'}, '我有少女的一面！你呢？', '#' + 'result=' + shojo.result + '&id=' + shojo.id);
+					// history.replaceState({result: '3'}, '我有少女的一面！你呢？', '#' + 'result=' + shojo.result + '&id=' + shojo.id);
 					break;
 				case 4:
 					document.title = '我少女指数爆棚！你呢？';
-//					history.replaceState({result: '4'}, '我少女指数爆棚！你呢？', '#' + 'result=' + shojo.result + '&id=' + shojo.id);
+					// history.replaceState({result: '4'}, '我少女指数爆棚！你呢？', '#' + 'result=' + shojo.result + '&id=' + shojo.id);
 					break;
 				default: 
 
