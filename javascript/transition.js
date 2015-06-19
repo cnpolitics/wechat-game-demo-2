@@ -1,4 +1,15 @@
 /* global $, shojo */
+
+/**
+ * References for the Baidu Analytics
+ * _hmt.push(['_trackEvent', 'nezha', 'nezha_click', 'nezha_view_start']);
+ * _hmt.push(['_trackEvent', 'nezha', 'nezha_click', 'nezha_view_score']);
+ * _hmt.push(['_trackEvent', 'nezha', 'nezha_click', 'nezha_button_back2share']);
+ * _hmt.push(['_trackEvent', 'nezha', 'nezha_click', 'nezha_button_shareguide']);
+ * _hmt.push(['_trackEvent', 'nezha', 'nezha_click', 'nezha_link_shaonv']);
+ * _hmt.push(['_trackEvent', 'nezha', 'nezha_click', 'nezha_link_mzread']);
+ */
+
 (function(shojo) {
 	'use strict';
 	
@@ -94,6 +105,9 @@
 	
 	// Pop on/off the share guide.
 	$('.share-btn').click(function() {
+		// Baidu analytics: Click share guide.
+		_hmt.push(['_trackEvent', 'nezha', 'nezha_click', 'nezha_button_shareguide']);
+		
 		// Pop on.
 		$('.modal-wrap, .modal-wrap .share-guide').addClass('active');
 		$('.hero-wrap .active, .hero-wrap .tearpaper-lower img, .main-wrap .active, .foot-wrap .active')
