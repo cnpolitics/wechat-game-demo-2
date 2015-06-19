@@ -58,25 +58,24 @@
 		result = result ? result.substring(0, 1) : null;
 		userid = userid ? userid.substring(0, 36) : null;
 		flag = flag ? flag.substring(0, 1) : null;
-//		console.log('hashURL: ' + hashURL);
-//		console.log('result: ' + result);
-//		console.log('userid: ' + userid);
-//		console.log('flag: ' + flag);
+		// console.log('hashURL: ' + hashURL);
+		// console.log('result: ' + result);
+		// console.log('userid: ' + userid);
+		// console.log('flag: ' + flag);
 		
 		if (result === null) {
-//			console.log('No result. Default cover.');
-			// Show default cover. Ready to start.
-			
 			// Baidu analytics: Start.
 			_hmt.push(['_trackEvent', 'nezha', 'nezha_click', 'nezha_view_start']);
 			
+			// Show default cover. Ready to start.
+			// console.log('No result. Default cover.');
 			$('.hero-wrap .cover').addClass('active');
 			$('.main-wrap .copy').addClass('cover');
 			$('.foot-wrap .start-btn').show().addClass('active');
 			
 		} else if (userid === shojo.id) {
-//			console.log('This is myself. My result.');
 			// Show my result from the URL.
+			// console.log('This is myself. My result.');
 			$('.hero-wrap .result-' + result).addClass('active');
 			$('.main-wrap .copy').addClass('result-' + result);
 			//$('.main-wrap .share-widget').show().addClass('active');
@@ -108,30 +107,15 @@
 					document.title = '我少女指数爆棚！你呢？';
 					break;
 				default:
-
 			}
 		} else {
-			// Show the custom cover from URL. Ready to start.
-			
 			// Baidu analytics: Start.
 			_hmt.push(['_trackEvent', 'nezha', 'nezha_click', 'nezha_view_start']);
-			
+
+			// Show the custom cover from URL. Ready to start.
 			$('.hero-wrap .result-' + result).addClass('active');
 			$('.main-wrap .copy').addClass('cover-' + result);
 			$('.foot-wrap .start-btn').show().addClass('active');
-			
-			switch (result) {
-				case '1':
-					break;
-				case '2':
-					break;
-				case '3':
-					break;
-				case '4':
-					break;
-				default:
-
-			}
 		}
 	});
 	
@@ -176,7 +160,6 @@
 					// history.replaceState({result: '4'}, '我少女指数爆棚！你呢？', '#' + 'result=' + shojo.result + '&id=' + shojo.id);
 					break;
 				default: 
-
 			}
 		}
 		
