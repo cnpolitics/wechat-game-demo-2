@@ -1,14 +1,4 @@
-/* global $, FastClick, Shojo, _hmt */
-
-/**
- * References for the Baidu Analytics
- * _hmt.push(['_trackEvent', 'nezha', 'nezha_click', 'nezha_view_start']);
- * _hmt.push(['_trackEvent', 'nezha', 'nezha_click', 'nezha_view_score']);
- * _hmt.push(['_trackEvent', 'nezha', 'nezha_click', 'nezha_button_back2share']);
- * _hmt.push(['_trackEvent', 'nezha', 'nezha_click', 'nezha_button_shareguide']);
- * _hmt.push(['_trackEvent', 'nezha', 'nezha_click', 'nezha_link_shaonv']);
- * _hmt.push(['_trackEvent', 'nezha', 'nezha_click', 'nezha_link_mzread']);
- */
+/* global $, FastClick, Shojo */
 
 $(function() {
 	FastClick.attach(document.body);
@@ -42,14 +32,3 @@ $(window).on('resize', function() {
 });
 
 var shojo = new Shojo();
-
-// Baidu analytics: Click link shaonv.
-$('footer .logo-nezha').click(function() {
-	// console.log('click nezha');
-	_hmt.push(['_trackEvent', 'nezha', 'nezha_click', 'nezha_link_shaonv']);	
-});
-// Baidu analytics: Click link mzread.
-$('footer .logo-mzread').click(function() {
-	// console.log('click mzread');
-	_hmt.push(['_trackEvent', 'nezha', 'nezha_click', 'nezha_link_mzread']);	
-});

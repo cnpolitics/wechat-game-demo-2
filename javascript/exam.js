@@ -1,9 +1,10 @@
-/* global $, Shojo, uuid, shojo, _hmt*/
+/* global $, uuid, shojo, _hmt*/
 
 /**
  * References for the Baidu Analytics
- * _hmt.push(['_trackEvent', 'nezha', 'nezha_click', 'nezha_view_start']);
+ * _hmt.push(['_trackEvent', 'nezha', 'nezha_click', 'nezha_view_cover']);
  * _hmt.push(['_trackEvent', 'nezha', 'nezha_click', 'nezha_view_score']);
+ * _hmt.push(['_trackEvent', 'nezha', 'nezha_click', 'nezha_button_start2play']);
  * _hmt.push(['_trackEvent', 'nezha', 'nezha_click', 'nezha_button_back2share']);
  * _hmt.push(['_trackEvent', 'nezha', 'nezha_click', 'nezha_button_shareguide']);
  * _hmt.push(['_trackEvent', 'nezha', 'nezha_click', 'nezha_link_shaonv']);
@@ -64,8 +65,9 @@
 		// console.log('flag: ' + flag);
 		
 		if (result === null) {
-			// Baidu analytics: Start.
-			_hmt.push(['_trackEvent', 'nezha', 'nezha_click', 'nezha_view_start']);
+			// Baidu analytics: View cover.
+			// console.log('view cover (default)');
+			_hmt.push(['_trackEvent', 'nezha', 'nezha_click', 'nezha_view_cover']);
 			
 			// Show default cover. Ready to start.
 			// console.log('No result. Default cover.');
@@ -83,8 +85,8 @@
 			$('.foot-wrap').addClass('result');
 			$('.foot-wrap footer.result').show().addClass('active');
 			
-			// Another logic: alway show me the last updated result.
 			/*
+			// Another logic: alway show me the last updated result.
 			var myLastResult = $.cookie('mzNeZha.result');
 			$('.hero-wrap .result-' + myLastResult).addClass('active');
 			$('.main-wrap .copy').addClass('result-' + myLastResult);
@@ -109,8 +111,9 @@
 				default:
 			}
 		} else {
-			// Baidu analytics: Start.
-			_hmt.push(['_trackEvent', 'nezha', 'nezha_click', 'nezha_view_start']);
+			// Baidu analytics: View cover.
+			// console.log('view cover (custom)');
+			_hmt.push(['_trackEvent', 'nezha', 'nezha_click', 'nezha_view_cover']);
 
 			// Show the custom cover from URL. Ready to start.
 			$('.hero-wrap .result-' + result).addClass('active');
@@ -118,10 +121,11 @@
 			$('.foot-wrap .start-btn').show().addClass('active');
 		}
 	});
-	
-	
-	
-	//====== DO THE EXAM.
+
+	/**
+	 * DO THE EXAM.
+	 */
+
 	var currQuestIdx = 1;
 	
 	$('.opt-btn').click(function() {
@@ -132,7 +136,8 @@
 		
 		// Calc result; write cookie, hash URL and doc title.
 		if (currQuestIdx === 8) {
-			// Baidu analytics: Score.
+			// Baidu analytics: Complete test, and view score.
+			// console.log('view score');
 			_hmt.push(['_trackEvent', 'nezha', 'nezha_click', 'nezha_view_score']);
 			
 			// Calc result, and write cookie.
@@ -164,5 +169,31 @@
 		}
 		
 		currQuestIdx++;
+	});
+
+	/**
+	 * Baidu Analytics:
+	 * Count the clicks of some buttons/links.
+	 */
+
+	// Start to play.
+	$('.start-btn').click(function() {
+		// console.log('click start');
+		_hmt.push(['_trackEvent', 'nezha', 'nezha_click', 'nezha_button_start2play']);
+	});
+	// Click share guide.
+	$('.share-btn').click(function() {
+		// console.log('click share');
+		_hmt.push(['_trackEvent', 'nezha', 'nezha_click', 'nezha_button_shareguide']);
+	});
+	// Click link shaonv.
+	$('footer .logo-nezha').click(function() {
+		// console.log('click nezha');
+		_hmt.push(['_trackEvent', 'nezha', 'nezha_click', 'nezha_link_shaonv']);	
+	});
+	// Click link mzread.
+	$('footer .logo-mzread').click(function() {
+		// console.log('click mzread');
+		_hmt.push(['_trackEvent', 'nezha', 'nezha_click', 'nezha_link_mzread']);	
 	});
 })(shojo);
