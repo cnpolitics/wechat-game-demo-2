@@ -1662,12 +1662,12 @@
 		},
 	"\/javascript\/app.js": {
 		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
+		"ignore": 0,
+		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/javascript\/app.js",
-		"outputAbbreviatedPath": "\/javascript\/min\/app-min.js",
+		"outputAbbreviatedPath": "\/assets\/app.js",
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
+		"outputPathIsSetByUser": 1,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
@@ -1953,6 +1953,26 @@
 			"followForSyntaxChecking": 1,
 			"linkedFileAbbreviatedPath": "\/bower_components\/fastclick\/lib\/fastclick.js",
 			"position": 3,
+			"type": 1
+			}
+		],
+	"\/javascript\/app.js": [
+		{
+			"followForSyntaxChecking": 1,
+			"linkedFileAbbreviatedPath": "\/javascript\/shojo.js",
+			"position": 0,
+			"type": 0
+			},
+		{
+			"followForSyntaxChecking": 1,
+			"linkedFileAbbreviatedPath": "\/javascript\/exam.js",
+			"position": 1,
+			"type": 1
+			},
+		{
+			"followForSyntaxChecking": 1,
+			"linkedFileAbbreviatedPath": "\/javascript\/transition.js",
+			"position": 2,
 			"type": 1
 			}
 		]
