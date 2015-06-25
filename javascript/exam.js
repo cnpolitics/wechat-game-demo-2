@@ -4,6 +4,7 @@
  * References for the Baidu Analytics
  * _hmt.push(['_trackEvent', 'nezha', 'nezha_click', 'nezha_view_cover']);
  * _hmt.push(['_trackEvent', 'nezha', 'nezha_click', 'nezha_view_score']);
+ * _hmt.push(['_trackEvent', 'nezha', 'nezha_click', 'nezha_view_myurl']);
  * _hmt.push(['_trackEvent', 'nezha', 'nezha_click', 'nezha_button_start2play']);
  * _hmt.push(['_trackEvent', 'nezha', 'nezha_click', 'nezha_button_back2share']);
  * _hmt.push(['_trackEvent', 'nezha', 'nezha_click', 'nezha_button_shareguide']);
@@ -76,6 +77,10 @@
 			$('.foot-wrap .start-btn').show().addClass('active');
 			
 		} else if (userid === shojo.id) {
+			// Baidu analytics: View my URL.
+			// console.log('view cover (my result with footer)');
+			_hmt.push(['_trackEvent', 'nezha', 'nezha_click', 'nezha_view_myurl']);
+			
 			// Show my result from the URL.
 			// console.log('This is myself. My result.');
 			$('.hero-wrap .result-' + result).addClass('active');
