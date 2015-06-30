@@ -1954,6 +1954,17 @@
 		"outputPathIsSetByUser": 1,
 		"outputStyle": 1
 		},
+	"\/javascript\/_app.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/javascript\/_app.js",
+		"outputAbbreviatedPath": "\/javascript\/min\/_app-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/javascript\/_libs.js": {
 		"fileType": 64,
 		"ignore": 0,
@@ -1964,17 +1975,6 @@
 		"outputPathIsSetByUser": 1,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 0
-		},
-	"\/javascript\/app.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 1,
-		"inputAbbreviatedPath": "\/javascript\/app.js",
-		"outputAbbreviatedPath": "\/assets\/app.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 1,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
 		},
 	"\/javascript\/exam.js": {
 		"fileType": 64,
@@ -1998,6 +1998,17 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/javascript\/main.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/javascript\/main.js",
+		"outputAbbreviatedPath": "\/javascript\/min\/main-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/javascript\/shojo.js": {
 		"fileType": 64,
 		"ignore": 1,
@@ -2015,6 +2026,50 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/javascript\/transition.js",
 		"outputAbbreviatedPath": "\/javascript\/min\/transition-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/javascript\/vendor\/fastclick.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/javascript\/vendor\/fastclick.js",
+		"outputAbbreviatedPath": "\/javascript\/vendor\/min\/fastclick-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/javascript\/vendor\/jquery.cookie.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/javascript\/vendor\/jquery.cookie.js",
+		"outputAbbreviatedPath": "\/javascript\/vendor\/min\/jquery.cookie-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/javascript\/vendor\/jquery.min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/javascript\/vendor\/jquery.min.js",
+		"outputAbbreviatedPath": "\/javascript\/vendor\/min\/jquery.min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/javascript\/vendor\/uuid.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/javascript\/vendor\/uuid.js",
+		"outputAbbreviatedPath": "\/javascript\/vendor\/min\/uuid-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -2235,49 +2290,55 @@
 	],
 "lastSavedByUser": "钱争予",
 "manualImportLinks": {
-	"\/javascript\/_libs.js": [
-		{
-			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/bower_components\/jquery\/dist\/jquery.min.js",
-			"position": 0,
-			"type": 1
-			},
-		{
-			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/bower_components\/jquery-cookie\/jquery.cookie.js",
-			"position": 1,
-			"type": 1
-			},
-		{
-			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/bower_components\/node-uuid\/uuid.js",
-			"position": 2,
-			"type": 1
-			},
-		{
-			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/bower_components\/fastclick\/lib\/fastclick.js",
-			"position": 3,
-			"type": 1
-			}
-		],
-	"\/javascript\/app.js": [
+	"\/javascript\/_app.js": [
 		{
 			"followForSyntaxChecking": 1,
 			"linkedFileAbbreviatedPath": "\/javascript\/shojo.js",
 			"position": 0,
-			"type": 0
+			"type": 1
+			},
+		{
+			"followForSyntaxChecking": 1,
+			"linkedFileAbbreviatedPath": "\/javascript\/main.js",
+			"position": 1,
+			"type": 1
 			},
 		{
 			"followForSyntaxChecking": 1,
 			"linkedFileAbbreviatedPath": "\/javascript\/exam.js",
-			"position": 1,
+			"position": 2,
 			"type": 1
 			},
 		{
 			"followForSyntaxChecking": 1,
 			"linkedFileAbbreviatedPath": "\/javascript\/transition.js",
+			"position": 3,
+			"type": 1
+			}
+		],
+	"\/javascript\/_libs.js": [
+		{
+			"followForSyntaxChecking": 1,
+			"linkedFileAbbreviatedPath": "\/javascript\/vendor\/jquery.min.js",
+			"position": 0,
+			"type": 1
+			},
+		{
+			"followForSyntaxChecking": 1,
+			"linkedFileAbbreviatedPath": "\/javascript\/vendor\/jquery.cookie.js",
+			"position": 1,
+			"type": 1
+			},
+		{
+			"followForSyntaxChecking": 1,
+			"linkedFileAbbreviatedPath": "\/javascript\/vendor\/uuid.js",
 			"position": 2,
+			"type": 1
+			},
+		{
+			"followForSyntaxChecking": 1,
+			"linkedFileAbbreviatedPath": "\/javascript\/vendor\/fastclick.js",
+			"position": 3,
 			"type": 1
 			}
 		]
