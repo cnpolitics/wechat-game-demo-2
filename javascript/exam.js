@@ -1,4 +1,17 @@
-/* global $, Shojo, uuid, shojo*/
+/* global $, uuid, shojo, _hmt*/
+
+/**
+ * References for the Baidu Analytics
+ * _hmt.push(['_trackEvent', 'nezha', 'nezha_click', 'nezha_view_cover']);
+ * _hmt.push(['_trackEvent', 'nezha', 'nezha_click', 'nezha_view_score']);
+ * _hmt.push(['_trackEvent', 'nezha', 'nezha_click', 'nezha_view_myurl']);
+ * _hmt.push(['_trackEvent', 'nezha', 'nezha_click', 'nezha_button_start2play']);
+ * _hmt.push(['_trackEvent', 'nezha', 'nezha_click', 'nezha_button_back2share']);
+ * _hmt.push(['_trackEvent', 'nezha', 'nezha_click', 'nezha_button_shareguide']);
+ * _hmt.push(['_trackEvent', 'nezha', 'nezha_click', 'nezha_link_shaonv']);
+ * _hmt.push(['_trackEvent', 'nezha', 'nezha_click', 'nezha_link_mzread']);
+ */
+
 (function(shojo) {
 	'use strict';
 	
@@ -47,21 +60,29 @@
 		result = result ? result.substring(0, 1) : null;
 		userid = userid ? userid.substring(0, 36) : null;
 		flag = flag ? flag.substring(0, 1) : null;
-//		console.log('hashURL: ' + hashURL);
-//		console.log('result: ' + result);
-//		console.log('userid: ' + userid);
-//		console.log('flag: ' + flag);
+		// console.log('hashURL: ' + hashURL);
+		// console.log('result: ' + result);
+		// console.log('userid: ' + userid);
+		// console.log('flag: ' + flag);
 		
 		if (result === null) {
-//			console.log('No result. Default cover.');
-			// Show default cover.
+			// Baidu analytics: View cover.
+			// console.log('view cover (default)');
+			_hmt.push(['_trackEvent', 'nezha', 'nezha_click', 'nezha_view_cover']);
+			
+			// Show default cover. Ready to start.
+			// console.log('No result. Default cover.');
 			$('.hero-wrap .cover').addClass('active');
 			$('.main-wrap .copy').addClass('cover');
 			$('.foot-wrap .start-btn').show().addClass('active');
 			
 		} else if (userid === shojo.id) {
-//			console.log('This is myself. My result.');
-			// Show my result frome the URL.
+			// Baidu analytics: View my URL.
+			// console.log('view cover (my result with footer)');
+			_hmt.push(['_trackEvent', 'nezha', 'nezha_click', 'nezha_view_myurl']);
+			
+			// Show my result from the URL.
+			// console.log('This is myself. My result.');
 			$('.hero-wrap .result-' + result).addClass('active');
 			$('.main-wrap .copy').addClass('result-' + result);
 			//$('.main-wrap .share-widget').show().addClass('active');
@@ -69,8 +90,8 @@
 			$('.foot-wrap').addClass('result');
 			$('.foot-wrap footer.result').show().addClass('active');
 			
-			// Another logic: alway show me the last updated result.
 			/*
+			// Another logic: alway show me the last updated result.
 			var myLastResult = $.cookie('mzNeZha.result');
 			$('.hero-wrap .result-' + myLastResult).addClass('active');
 			$('.main-wrap .copy').addClass('result-' + myLastResult);
@@ -93,32 +114,23 @@
 					document.title = '我少女指数爆棚！你呢？';
 					break;
 				default:
-
 			}
 		} else {
-			// Show the custom cover from URL.
+			// Baidu analytics: View cover.
+			// console.log('view cover (custom)');
+			_hmt.push(['_trackEvent', 'nezha', 'nezha_click', 'nezha_view_cover']);
+
+			// Show the custom cover from URL. Ready to start.
 			$('.hero-wrap .result-' + result).addClass('active');
 			$('.main-wrap .copy').addClass('cover-' + result);
 			$('.foot-wrap .start-btn').show().addClass('active');
-			
-			switch (result) {
-				case '1':
-					break;
-				case '2':
-					break;
-				case '3':
-					break;
-				case '4':
-					break;
-				default:
-
-			}
 		}
 	});
-	
-	
-	
-	//====== DO THE EXAM.
+
+	/**
+	 * DO THE EXAM.
+	 */
+
 	var currQuestIdx = 1;
 	
 	$('.opt-btn').click(function() {
@@ -129,6 +141,10 @@
 		
 		// Calc result; write cookie, hash URL and doc title.
 		if (currQuestIdx === 8) {
+			// Baidu analytics: Complete test, and view score.
+			// console.log('view score');
+			_hmt.push(['_trackEvent', 'nezha', 'nezha_click', 'nezha_view_score']);
+			
 			// Calc result, and write cookie.
 			$.cookie('mzNeZha.result', calcResult(shojo.getScore(SCORE_CHART)), { expires: 30 });
 			
@@ -139,25 +155,50 @@
 			switch (shojo.result) {
 				case 1:
 					document.title = '我没救了！你呢？';
-//					history.replaceState({result: '1'}, '我没救了！你呢？', '#' + 'result=' + shojo.result + '&id=' + shojo.id);
+					// history.replaceState({result: '1'}, '我没救了！你呢？', '#' + 'result=' + shojo.result + '&id=' + shojo.id);
 					break;
 				case 2:
 					document.title = '我离少女越来越远！你呢？';
-//					history.replaceState({result: '2'}, '我离少女越来越远！你呢？', '#' + 'result=' + shojo.result + '&id=' + shojo.id);
+					// history.replaceState({result: '2'}, '我离少女越来越远！你呢？', '#' + 'result=' + shojo.result + '&id=' + shojo.id);
 					break;
 				case 3:
 					document.title = '我有少女的一面！你呢？';
-//					history.replaceState({result: '3'}, '我有少女的一面！你呢？', '#' + 'result=' + shojo.result + '&id=' + shojo.id);
+					// history.replaceState({result: '3'}, '我有少女的一面！你呢？', '#' + 'result=' + shojo.result + '&id=' + shojo.id);
 					break;
 				case 4:
 					document.title = '我少女指数爆棚！你呢？';
-//					history.replaceState({result: '4'}, '我少女指数爆棚！你呢？', '#' + 'result=' + shojo.result + '&id=' + shojo.id);
+					// history.replaceState({result: '4'}, '我少女指数爆棚！你呢？', '#' + 'result=' + shojo.result + '&id=' + shojo.id);
 					break;
 				default: 
-
 			}
 		}
 		
 		currQuestIdx++;
+	});
+
+	/**
+	 * Baidu Analytics:
+	 * Count the clicks of some buttons/links.
+	 */
+
+	// Start to play.
+	$('.start-btn').click(function() {
+		// console.log('click start');
+		_hmt.push(['_trackEvent', 'nezha', 'nezha_click', 'nezha_button_start2play']);
+	});
+	// Click share guide.
+	$('.share-btn').click(function() {
+		// console.log('click share');
+		_hmt.push(['_trackEvent', 'nezha', 'nezha_click', 'nezha_button_shareguide']);
+	});
+	// Click link shaonv.
+	$('footer .logo-nezha').click(function() {
+		// console.log('click nezha');
+		_hmt.push(['_trackEvent', 'nezha', 'nezha_click', 'nezha_link_shaonv']);	
+	});
+	// Click link mzread.
+	$('footer .logo-mzread').click(function() {
+		// console.log('click mzread');
+		_hmt.push(['_trackEvent', 'nezha', 'nezha_click', 'nezha_link_mzread']);	
 	});
 })(shojo);

@@ -1,6 +1,7 @@
 /* global $, FastClick, Shojo */
+
 $(function() {
-    FastClick.attach(document.body);
+	FastClick.attach(document.body);
 });
 
 /* Switch pressing effect for touch device. */

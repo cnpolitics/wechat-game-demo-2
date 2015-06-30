@@ -70,3 +70,18 @@
 
 ### 未修正部分：
 - 第一题的内容暂时还没换。新题的文案比现有的这题更长，没法直接填入目前的设计模板……晚些再看怎么调整。
+
+* * *
+
+## Ver. 0.5/0.5.1 (beta)
+
+A try-error for preloading (loading screen).
+
+* * *
+
+## Ver. 1.0
+<http://realfish.bitbucket.org/MZRead-NeZha-V1.0/>
+
+### 更新：
+1. 更新领取红包链接（指向格瓦拉测试页面）；
+2. 修正微信分享的文案生成逻辑。

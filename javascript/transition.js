@@ -1,4 +1,5 @@
 /* global $, shojo */
+
 (function(shojo) {
 	'use strict';
 	
@@ -93,7 +94,7 @@
 	});
 	
 	// Pop on/off the share guide.
-	$('.share-btn').click(function() {
+	$('.share-btn').click(function() {		
 		// Pop on.
 		$('.modal-wrap, .modal-wrap .share-guide').addClass('active');
 		$('.hero-wrap .active, .hero-wrap .tearpaper-lower img, .main-wrap .active, .foot-wrap .active')
