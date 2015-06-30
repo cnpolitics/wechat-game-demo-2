@@ -86,3 +86,9 @@ A try-error for preloading (loading screen).
 1. 更新领取红包链接（指向格瓦拉测试页面）；
 2. 修正微信分享的文案生成逻辑；
 3. 植入百度统计。
+
+## Ver. 1.0.1
+<http://realfish.bitbucket.org/MZRead-NeZha-V1.0.1/>
+
+### 修复：
+- 更新第一题文案。
