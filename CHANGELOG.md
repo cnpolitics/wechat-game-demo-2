@@ -92,3 +92,19 @@ A try-error for preloading (loading screen).
 
 ### 修复：
 - 更新第一题文案。
+
+* * *
+
+## Ver. 1.1
+<http://realfish.bitbucket.org/MZRead-NeZha-V1.1/>
+
+### 更新：
+1. 第一题配图；
+2. 个性化封面的引导文案（我也来测测）；
+3. 微信分享文案；
+4. 微信分享缩略图；
+5. 结果页「少女哪吒」logo 对应链接；
+6. 领取红包 URL 参数传递；
+7. 部分微小的性能优化。
+
+格瓦拉 URL 参数：`?id=150626142523&result=x&user=xxxxxxxx-xxxx-4xxx-xxxx-xxxxxxxxxxxx&flag=1`
