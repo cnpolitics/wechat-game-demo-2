@@ -1,6 +1,5 @@
 # TODO
 
-5. Update the hero image of 1st question.
 
 ---
 
