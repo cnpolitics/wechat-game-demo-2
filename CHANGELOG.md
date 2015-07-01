@@ -104,4 +104,7 @@ A try-error for preloading (loading screen).
 3. 微信分享文案；
 4. 微信分享缩略图；
 5. 结果页「少女哪吒」logo 对应链接；
-6. 领取红包 URL 参数传递（?id=150626142523&result=x&user=xxxxxxxx-xxxx-4xxx-xxxx-xxxxxxxxxxxx&flag=1）
+6. 领取红包 URL 参数传递；
+7. 部分微小的性能优化。
+
+格瓦拉 URL 参数：`?id=150626142523&result=x&user=xxxxxxxx-xxxx-4xxx-xxxx-xxxxxxxxxxxx&flag=1`
