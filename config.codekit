@@ -1956,12 +1956,12 @@
 		},
 	"\/javascript\/_app.js": {
 		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
+		"ignore": 0,
+		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/javascript\/_app.js",
-		"outputAbbreviatedPath": "\/javascript\/min\/_app-min.js",
+		"outputAbbreviatedPath": "\/assets\/app.js",
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
+		"outputPathIsSetByUser": 1,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
