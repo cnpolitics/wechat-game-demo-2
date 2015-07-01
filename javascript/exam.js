@@ -93,9 +93,9 @@
 			// Update the gift target:
 			// Append a hash string to pass the parameters to Gewara.
 			$('.gift-btn').attr('href',
-				'http://m.gewara.com/wz/special/quan/index.xhtml?id=150626142523#' +
-				'result=' + result +
-				'&id=' + userid +
+				'http://m.gewara.com/wz/special/quan/index.xhtml?id=150626142523' +
+				'&result=' + result +
+				'&user=' + userid +
 				'&flag=1');
 			
 			/*
@@ -162,9 +162,9 @@
 			// Update the gift target:
 			// Append a hash string to pass the parameters to Gewara.
 			$('.gift-btn').attr('href',
-				'http://m.gewara.com/wz/special/quan/index.xhtml?id=150626142523#' +
-				'result=' + shojo.result +
-				'&id=' + shojo.id +
+				'http://m.gewara.com/wz/special/quan/index.xhtml?id=150626142523' +
+				'&result=' + shojo.result +
+				'&user=' + shojo.id +
 				'&flag=1');
 			
 			// Write doc title.
