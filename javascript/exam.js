@@ -90,6 +90,14 @@
 			$('.foot-wrap').addClass('result');
 			$('.foot-wrap footer.result').show().addClass('active');
 			
+			// Update the gift target:
+			// Append a hash string to pass the parameters to Gewara.
+			$('.gift-btn').attr('href',
+				'http://m.gewara.com/wz/special/quan/index.xhtml?id=150626142523' +
+				'&result=' + result +
+				'&user=' + userid +
+				'&flag=1');
+			
 			/*
 			// Another logic: alway show me the last updated result.
 			var myLastResult = $.cookie('mzNeZha.result');
@@ -102,16 +110,16 @@
 			// Write doc title.
 			switch (result) {
 				case '1':
-					document.title = '我没救了！你呢？';
+					document.title = '我的少女指数鉴定结果是：没救了，满脸褶子在装嫩！你也快来测试拿红包吧！';
 					break;
 				case '2':
-					document.title = '我离少女越来越远！你呢？';
+					document.title = '我的少女指数鉴定结果是：离少女越来越远了！你也快来测试拿红包吧！';
 					break;
 				case '3':
-					document.title = '我有少女的一面！你呢？';
+					document.title = '我的少女指数鉴定结果是：有少女的一面！你也快来测试拿红包吧！';
 					break;
 				case '4':
-					document.title = '我少女指数爆棚！你呢？';
+					document.title = '我的少女指数鉴定结果是：少女指数爆棚！你也快来测试拿红包吧！';
 					break;
 				default:
 			}
@@ -151,22 +159,30 @@
 			// Write hash URL.
 			window.location.hash = 'result=' + shojo.result + '&id=' + shojo.id;
 			
+			// Update the gift target:
+			// Append a hash string to pass the parameters to Gewara.
+			$('.gift-btn').attr('href',
+				'http://m.gewara.com/wz/special/quan/index.xhtml?id=150626142523' +
+				'&result=' + shojo.result +
+				'&user=' + shojo.id +
+				'&flag=1');
+			
 			// Write doc title.
 			switch (shojo.result) {
 				case 1:
-					document.title = '我没救了！你呢？';
+					document.title = '我的少女指数鉴定结果是：没救了，满脸褶子在装嫩！你也快来测试拿红包吧！';
 					// history.replaceState({result: '1'}, '我没救了！你呢？', '#' + 'result=' + shojo.result + '&id=' + shojo.id);
 					break;
 				case 2:
-					document.title = '我离少女越来越远！你呢？';
+					document.title = '我的少女指数鉴定结果是：离少女越来越远了！你也快来测试拿红包吧！';
 					// history.replaceState({result: '2'}, '我离少女越来越远！你呢？', '#' + 'result=' + shojo.result + '&id=' + shojo.id);
 					break;
 				case 3:
-					document.title = '我有少女的一面！你呢？';
+					document.title = '我的少女指数鉴定结果是：有少女的一面！你也快来测试拿红包吧！';
 					// history.replaceState({result: '3'}, '我有少女的一面！你呢？', '#' + 'result=' + shojo.result + '&id=' + shojo.id);
 					break;
 				case 4:
-					document.title = '我少女指数爆棚！你呢？';
+					document.title = '我的少女指数鉴定结果是：少女指数爆棚！你也快来测试拿红包吧！';
 					// history.replaceState({result: '4'}, '我少女指数爆棚！你呢？', '#' + 'result=' + shojo.result + '&id=' + shojo.id);
 					break;
 				default: 
