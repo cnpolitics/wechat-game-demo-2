@@ -90,6 +90,14 @@
 			$('.foot-wrap').addClass('result');
 			$('.foot-wrap footer.result').show().addClass('active');
 			
+			// Update the gift target:
+			// Append a hash string to pass the parameters to Gewara.
+			$('.gift-btn').attr('href',
+				'http://m.gewara.com/wz/special/quan/index.xhtml?id=150626142523#' +
+				'result=' + result +
+				'&id=' + userid +
+				'&flag=1');
+			
 			/*
 			// Another logic: alway show me the last updated result.
 			var myLastResult = $.cookie('mzNeZha.result');
@@ -150,6 +158,14 @@
 			
 			// Write hash URL.
 			window.location.hash = 'result=' + shojo.result + '&id=' + shojo.id;
+			
+			// Update the gift target:
+			// Append a hash string to pass the parameters to Gewara.
+			$('.gift-btn').attr('href',
+				'http://m.gewara.com/wz/special/quan/index.xhtml?id=150626142523#' +
+				'result=' + shojo.result +
+				'&id=' + shojo.id +
+				'&flag=1');
 			
 			// Write doc title.
 			switch (shojo.result) {
