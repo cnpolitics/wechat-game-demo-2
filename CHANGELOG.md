@@ -108,3 +108,8 @@ A try-error for preloading (loading screen).
 7. 部分微小的性能优化。
 
 格瓦拉 URL 参数：`?id=150626142523&result=x&user=xxxxxxxx-xxxx-4xxx-xxxx-xxxxxxxxxxxx&flag=1`
+
+## Ver. 1.1.1
+<http://realfish.bitbucket.org/MZRead-NeZha-V1.1.1/>
+
+Fix the score chart.
