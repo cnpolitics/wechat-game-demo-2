@@ -113,3 +113,8 @@ A try-error for preloading (loading screen).
 <http://realfish.bitbucket.org/MZRead-NeZha-V1.1.1/>
 
 Fix the score chart.
+
+## Ver. 1.1.2
+<http://realfish.bitbucket.org/MZRead-NeZha-V1.1.2/>
+
+Fix a Baidu Analytics bug: Declare the `_hmt` object at the `<head>` of HTML.
