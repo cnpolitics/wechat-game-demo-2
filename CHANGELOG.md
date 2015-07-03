@@ -118,3 +118,15 @@ Fix the score chart.
 <http://realfish.bitbucket.org/MZRead-NeZha-V1.1.2/>
 
 Fix a Baidu Analytics bug: Declare the `_hmt` object at the `<head>` of HTML.
+
+* * *
+
+## Ver. 1.2
+<http://realfish.bitbucket.org/MZRead-NeZha-V1.2/>
+
+### 更新：
+- 封底「拇指阅读」链接。
+
+### 修正：
+- 向下兼容至 Android 4.0；
+- 提升页面渲染的可靠性。
