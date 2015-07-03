@@ -134,3 +134,7 @@ Fix a Baidu Analytics bug: Declare the `_hmt` object at the `<head>` of HTML.
 ## Ver. 1.2.1
 
 Fix the copy of `.gift-label`.
+
+## Ver. 1.2.2
+
+Manually update the copy to prevent some potential wrong glyphs.
