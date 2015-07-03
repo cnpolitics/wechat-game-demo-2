@@ -14,11 +14,14 @@
 	position: relative;
 	min-height: 100%;
 	
+	padding-top: 65.625%;	/* Compatible for Android 4.3 */
 	padding-top: 65.625vw;
 	@media (min-height: 560px) {
+		padding-top: 70%;	/* Compatible for Android 4.3 */
 		padding-top: 70vw;
 	}
 	@media (min-height: 670px) {
+		padding-top: 75%;	/* Compatible for Android 4.3 */
 		padding-top: 75vw;
 	}
 	
@@ -29,6 +32,7 @@
 		padding-right: 1.5em;	
 	}
 	@media (min-width: 380px) {
+		padding-top: 75%;	/* Compatible for Android 4.3 */
 		padding-top: 75vw;
 		padding-left: 2em;
 		padding-right: 2em;	
@@ -83,9 +87,17 @@
 	.gift-widget {
 		position: absolute;
 		left: 0;
+		top: 210px;	/* Compatible for Android 4.3 */
 		top: 65.625vw;
-		@media (min-width: 350px) { top: 70vw; }
-		@media (min-width: 380px) { top: 75vw; }
+		@media (min-width: 350px) {
+			top: 252px;	/* Compatible for Android 4.3 */
+			top: 70vw;
+		}
+		@media (min-width: 380px) {
+			top: 285px;	/* Compatible for Android 4.3 */
+			top: 75vw;
+		}
+		
 		padding-top: (112em/16);
 		width: 100%;
 		height: (68em/16);
