@@ -130,3 +130,7 @@ Fix a Baidu Analytics bug: Declare the `_hmt` object at the `<head>` of HTML.
 ### 修正：
 - 向下兼容至 Android 4.0；
 - 提升页面渲染的可靠性。
+
+## Ver. 1.2.1
+
+Fix the copy of `.gift-label`.
