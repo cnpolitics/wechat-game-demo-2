@@ -111,15 +111,19 @@
 			switch (result) {
 				case '1':
 					document.title = '我的少女指数鉴定结果是：没救了，满脸褶子在装嫩！你也快来测试拿红包吧！';
+					$('.gift-label').html('少⼥指数这么低，<br>赶紧点这⾥领个红包恢复下你的少女⻛采吧！');
 					break;
 				case '2':
 					document.title = '我的少女指数鉴定结果是：离少女越来越远了！你也快来测试拿红包吧！';
+					$('.gift-label').html('少⼥指数有点低哦，<br>赶紧点这⾥领个红包恢复下你的少⼥风采吧！');
 					break;
 				case '3':
 					document.title = '我的少女指数鉴定结果是：有少女的一面！你也快来测试拿红包吧！';
+					$('.gift-label').html('少⼥指数还不错哦，<br>赶紧点这⾥领个红包继续加强你的少⼥⻛采吧！');
 					break;
 				case '4':
 					document.title = '我的少女指数鉴定结果是：少女指数爆棚！你也快来测试拿红包吧！';
+					$('.gift-label').html('哇！少⼥指数这么⾼！<br>我们决定要奖励你一个少⼥红包，快来点击领取！');
 					break;
 				default:
 			}
@@ -171,18 +175,22 @@
 			switch (shojo.result) {
 				case 1:
 					document.title = '我的少女指数鉴定结果是：没救了，满脸褶子在装嫩！你也快来测试拿红包吧！';
+					$('.gift-label').html('少⼥指数这么低，<br>赶紧点这⾥领个红包恢复下你的少女⻛采吧！');
 					// history.replaceState({result: '1'}, '我没救了！你呢？', '#' + 'result=' + shojo.result + '&id=' + shojo.id);
 					break;
 				case 2:
 					document.title = '我的少女指数鉴定结果是：离少女越来越远了！你也快来测试拿红包吧！';
+					$('.gift-label').html('少⼥指数有点低哦，<br>赶紧点这⾥领个红包恢复下你的少⼥风采吧！');
 					// history.replaceState({result: '2'}, '我离少女越来越远！你呢？', '#' + 'result=' + shojo.result + '&id=' + shojo.id);
 					break;
 				case 3:
 					document.title = '我的少女指数鉴定结果是：有少女的一面！你也快来测试拿红包吧！';
+					$('.gift-label').html('少⼥指数还不错哦，<br>赶紧点这⾥领个红包继续加强你的少⼥⻛采吧！');
 					// history.replaceState({result: '3'}, '我有少女的一面！你呢？', '#' + 'result=' + shojo.result + '&id=' + shojo.id);
 					break;
 				case 4:
 					document.title = '我的少女指数鉴定结果是：少女指数爆棚！你也快来测试拿红包吧！';
+					$('.gift-label').html('哇！少⼥指数这么⾼！<br>我们决定要奖励你一个少⼥红包，快来点击领取！');
 					// history.replaceState({result: '4'}, '我少女指数爆棚！你呢？', '#' + 'result=' + shojo.result + '&id=' + shojo.id);
 					break;
 				default: 
