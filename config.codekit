@@ -2293,26 +2293,32 @@
 	"\/javascript\/_app.js": [
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/javascript\/shojo.js",
+			"linkedFileAbbreviatedPath": "\/javascript\/load.js",
 			"position": 0,
-			"type": 1
+			"type": 0
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/javascript\/main.js",
+			"linkedFileAbbreviatedPath": "\/javascript\/shojo.js",
 			"position": 1,
 			"type": 1
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/javascript\/exam.js",
+			"linkedFileAbbreviatedPath": "\/javascript\/main.js",
 			"position": 2,
 			"type": 1
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/javascript\/transition.js",
+			"linkedFileAbbreviatedPath": "\/javascript\/exam.js",
 			"position": 3,
+			"type": 1
+			},
+		{
+			"followForSyntaxChecking": 1,
+			"linkedFileAbbreviatedPath": "\/javascript\/transition.js",
+			"position": 4,
 			"type": 1
 			}
 		],
